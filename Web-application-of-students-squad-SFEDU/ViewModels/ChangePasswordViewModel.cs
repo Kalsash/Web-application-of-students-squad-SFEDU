@@ -10,5 +10,6 @@ namespace Web_application_of_students_squad_SFEDU.ViewModels
         public string Id { get; set; }
         public string Email { get; set; }
         public string NewPassword { get; set; }
+        public string OldPassword { get; set; }
     }
 }
