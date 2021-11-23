@@ -8,7 +8,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
 {
     public class CustomUserValidator : IUserValidator<User>
     {
-        public Task<IdentityResult> ValidateAsync(UserManager<User> manager, User user)
+        public  Task<IdentityResult> ValidateAsync(UserManager<User> manager, User user)
         {
             List<IdentityError> errors = new List<IdentityError>();
 
