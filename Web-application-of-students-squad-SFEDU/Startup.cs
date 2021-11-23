@@ -34,7 +34,9 @@ namespace Web_application_of_students_squad_SFEDU
                 opts.Password.RequireLowercase = false; // требуются ли символы в нижнем регистре
                 opts.Password.RequireUppercase = false; // требуются ли символы в верхнем регистре
                 opts.Password.RequireDigit = true; // требуются ли цифры
-    })
+                opts.User.RequireUniqueEmail = true;    // уникальный email
+                opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz"; // допустимые символы
+            })
                 .AddEntityFrameworkStores<ApplicationContext>();
 
             services.AddControllersWithViews();
