@@ -25,6 +25,10 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             return View();
         }
+
+        public IActionResult Profile() => View(_userManager.Users.ToList());
+
+
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -49,6 +53,8 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             }
             return View(model);
         }
+
+
 
         [HttpGet]
         public IActionResult Login(string returnUrl = null)

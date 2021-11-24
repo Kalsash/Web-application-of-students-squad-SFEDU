@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Web_application_of_students_squad_SFEDU.Models;
 using Web_application_of_students_squad_SFEDU.ViewModels;
-
+using Microsoft.AspNetCore.Authorization;
 namespace Web_application_of_students_squad_SFEDU.Controllers
 {
+   // [Authorize(Roles = "admin")]
     public class UsersController : Controller
     {
+      
         UserManager<User> _userManager;
 
         public UsersController(UserManager<User> userManager)
@@ -19,6 +21,8 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         public IActionResult Index() => View(_userManager.Users.ToList());
 
         public IActionResult Create() => View();
+
+        public IActionResult Profile() => View(_userManager.Users.ToList());
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserViewModel model)
