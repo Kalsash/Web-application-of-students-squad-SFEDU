@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Web_application_of_students_squad_SFEDU.Models.User>
+
+
+@foreach (User user in Model)
+{
+    if (user.Email == User.Identity.Name)
+    {
+        <p>Ваш логин: @User.Identity.Name</p>
+        <p>Ваш год рождения: @user.Year</p>
+
+        <p> <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Изменить персональные данные</a></p>
+        <p> <a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Сменить пароль</a></p>
+    }
+
+
+}
+
+
+<form method="post" asp-controller="Home" asp-action="Logout">
+    <input type="submit" value="Выход" />
+</form>
+

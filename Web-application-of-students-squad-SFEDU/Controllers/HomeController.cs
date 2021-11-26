@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
 {
     public class HomeController : Controller
     {
+        UserManager<User> _userManager;
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -23,10 +25,20 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             return View();
         }
 
+        public IActionResult Profile() => View(_userManager.Users.ToList());
         public IActionResult Privacy()
         {
             return View();
         }
+
+
+
+
+
+
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
