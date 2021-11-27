@@ -26,16 +26,38 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             _signInManager = signInManager;
         }
 
+        // Главная
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Profile() => View(_userManager.Users.ToList());
-        public IActionResult Privacy()
+        // Новости
+        public IActionResult News()
         {
             return View();
         }
+        // Направления
+        public IActionResult Directions()
+        {
+            return View();
+        }
+        // Структура
+        public IActionResult Structure()
+        {
+            return View();
+        }
+        // О нас
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        //Профиль
+        public IActionResult Profile() => View(_userManager.Users.ToList());
+
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
