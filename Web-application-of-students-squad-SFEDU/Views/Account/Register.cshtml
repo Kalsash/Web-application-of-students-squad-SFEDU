@@ -1,28 +1,41 @@
 ﻿@model Web_application_of_students_squad_SFEDU.ViewModels.RegisterViewModel
 <h2>Регистрация нового пользователя</h2>
-<form method="post" asp-controller="Account" asp-action="Register">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
+
+
+<section class="login_section">
+    <div class="container" style="position: center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login_form">
+                    <h5>
+                        Регистрация
+                    </h5>
+                    <form method="post" asp-controller="Account" asp-action="Register">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div>
+                            <label asp-for="Email"></label><br />
+                            <input asp-for="Email" />
+                            <span asp-validation-for="Email"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Year"></label><br />
+                            <input asp-for="Year" />
+                            <span asp-validation-for="Year"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Password"></label><br />
+                            <input asp-for="Password" />
+                            <span asp-validation-for="Password"></span>
+                        </div>
+                        <div>
+                            <label asp-for="PasswordConfirm"></label><br />
+                            <input asp-for="PasswordConfirm" />
+                            <span asp-validation-for="PasswordConfirm"></span>
+                        </div>
+                        <button type="submit">Зарегестрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label asp-for="Year"></label><br />
-        <input asp-for="Year" />
-        <span asp-validation-for="Year"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div>
-        <label asp-for="PasswordConfirm"></label><br />
-        <input asp-for="PasswordConfirm" />
-        <span asp-validation-for="PasswordConfirm"></span>
-    </div>
-    <div>
-        <input type="submit" value="Регистрация" />
-    </div>
-</form>
+</section>
