@@ -1,24 +1,49 @@
 ﻿@model Web_application_of_students_squad_SFEDU.ViewModels.LoginViewModel
-
 <h2>Вход в приложение</h2>
-<form method="post" asp-controller="Account" asp-action="Login"
-      asp-route-returnUrl="@Model.ReturnUrl">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div>
-        <label asp-for="RememberMe"></label><br />
-        <input asp-for="RememberMe" />
-    </div>
-    <div>
-        <input type="submit" value="Войти" />
-    </div>
-</form>
+
+    <section class="login_section">
+        <div class="container" style="position: center">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="login_form">
+                        <h5>
+                            Авторизация
+                        </h5>
+                        <form method="post" asp-controller="Account" asp-action="Login"
+                              asp-route-returnUrl="@Model.ReturnUrl">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <div>
+                                <label asp-for="Email"></label><br />
+                                <input asp-for="Email" />
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                            <div>
+                                <label asp-for="Password"></label><br />
+                                <input asp-for="Password" />
+                                <span asp-validation-for="Password"></span>
+                            </div>
+                            <div>
+                                <label asp-for="RememberMe"></label><br />
+                                <input asp-for="RememberMe" />
+                            </div>
+                            <button type="submit">Войти</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding-top: 2%">
+                    <div class="detail-box">
+                        <h3>
+                            РЕГИСТРАЦИЯ
+                        </h3>
+                        <p>
+                            Если у вас нет личного кабинета,<br> вы можете его создать по кнопке снизу
+
+                        </p>
+                        <a href="">
+                            Зарегистрироваться
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
