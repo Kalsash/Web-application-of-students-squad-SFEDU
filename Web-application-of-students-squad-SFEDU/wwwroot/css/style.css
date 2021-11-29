@@ -4,6 +4,10 @@ body {
   background-color: #ffffff;
 }
 
+header.header_section {
+    background-color: #cf2f1d;
+}
+
 .layout_padding {
   padding: 90px 0;
 }
@@ -347,16 +351,6 @@ transform: scale(1.3);
   position: relative;
 }
 
-.course_section .side_img {
-  position: absolute;
-  bottom: 25%;
-  width: 35px;
-}
-
-.course_section .side_img img {
-  width: 100%;
-}
-
 .course_section .heading_container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -364,7 +358,7 @@ transform: scale(1.3);
   margin-bottom: 25px;
 }
 
-.course_section .course_container .course_content {
+/*.course_section .course_container .course_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,7 +367,7 @@ transform: scale(1.3);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
+}*/
 
 .course_section .course_container .course_content .box {
   position: relative;
@@ -464,12 +458,14 @@ transform: scale(1.3);
 }
 
 .login_section {
-  background-image: url(../images/login-bg.jpg);
-  background-size: cover;
-  color: #ffffff;
-  height: 100vh;
-  margin-top: 64px;
-  padding-top: 6%;
+    background-image: url(../images/login-bg.jpg);
+    background-size: cover;
+    color: #ffffff;
+    height: 100vh;
+    padding-top: 6%;
+    margin-top: 64px;
+    padding-bottom: 5%;
+    height: auto;
 }
 
 .login_section .row {
@@ -477,7 +473,7 @@ transform: scale(1.3);
       -ms-flex-align: center;
           align-items: center;
 		  flex-direction: column;
-		  align-items: center
+		  align-items: center;
 }
 
 .login_section .detail-box h3 {
@@ -778,7 +774,7 @@ transform: scale(1.3);
 }
 
 .contact_section .contact-form input {
-  border: none;
+  border: 4px solid #3f48cc;
   outline: none;
   background-color: #ffffff;
   width: 100%;
@@ -836,6 +832,7 @@ transform: scale(1.3);
 .info_section {
   background-color: #cf2f1d;
   color: #ffffff;
+  padding-left: 2%;
 }
 
 .info_section h5 {
