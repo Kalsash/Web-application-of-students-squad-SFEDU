@@ -457,6 +457,32 @@ transform: scale(1.3);
   color: #ffffff;
 }
 
+.profile_section {
+    background-image: url(../images/login-bg.jpg);
+    background-size: cover;
+    color: #ffffff;
+    padding-top: 15%;
+    margin-top: 64px;
+    padding-bottom: 15%;
+    height: auto;
+}
+.profile_info {
+    position: center;
+    border-radius: 10px;
+    background-color: #ffffffbe;
+    padding: 5px 0px;
+}
+
+.profile_info p {
+    text-align: center;
+    font-size: 25px;
+}
+.profile_info form {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 25px;
+}
+
 .login_section {
     background-image: url(../images/login-bg.jpg);
     background-size: cover;

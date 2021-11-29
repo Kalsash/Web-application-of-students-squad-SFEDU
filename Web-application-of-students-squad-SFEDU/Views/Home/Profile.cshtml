@@ -1,22 +1,27 @@
 ﻿@model IEnumerable<Web_application_of_students_squad_SFEDU.Models.User>
 
+<section class="profile_section">
+    <div class="profile_info">
 
-@foreach (User user in Model)
-{
-    if (user.Email == User.Identity.Name)
-    {
-        <p>Ваш логин: @User.Identity.Name</p>
-        <p>Ваш год рождения: @user.Year</p>
+        @foreach (User user in Model)
+        {
+            if (user.Email == User.Identity.Name)
+            {
 
-        <p> <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Изменить персональные данные</a></p>
-        <p> <a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Сменить пароль</a></p>
-    }
+                <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Ваш логин: @User.Identity.Name</b></p>
+                <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Ваш год рождения: @user.Year</b></p>
 
-
-}
+                <p> <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Изменить персональные данные</a></p>
+                <p> <a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Сменить пароль</a></p>
 
 
-<form method="post" asp-controller="Home" asp-action="Logout">
-    <input type="submit" value="Выход" />
-</form>
+
+            }
+        }
+        <form method="post" asp-controller="Home" asp-action="Logout">
+            <input type="submit" value="Выход" />
+        </form>
+    </div>
+</section>
+
 

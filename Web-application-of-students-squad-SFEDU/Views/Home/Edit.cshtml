@@ -2,20 +2,24 @@
 @{
     ViewBag.Title = "Редактирование пользователя";
 }
-<form asp-action="Edit" asp-controller="Home">
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <input type="hidden" asp-for="Id" />
+<section class="profile_section">
+    <div class="profile_info">
+        <form asp-action="Edit" asp-controller="Home">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Id" />
+            </div>
+            <div class="form-group" style="padding: 10px">
+                <label asp-for="Email" class="control-label" style="color: black">Email</label>
+                <input type="text" asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group" style="padding: 10px">
+                <label asp-for="Year" class="control-label" style="color: black">Год рождения</label>
+                <input type="number" asp-for="Year" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-outline-secondary" style="border: 1px solid black; background-color: #eeedf7; color: black; "/>
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <label asp-for="Email" class="control-label">Email</label>
-        <input type="text" asp-for="Email" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Year" class="control-label">Год рождения</label>
-        <input type="number" asp-for="Year" class="form-control" />
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />
-    </div>
-</form>
+</section>

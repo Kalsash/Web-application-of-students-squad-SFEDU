@@ -1,4 +1,8 @@
 @media (max-width: 2048px) {
+    .profile_info {
+        margin-left: 33%;
+        margin-right: 33%;
+    }
     .course_section .course_container .course_content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -15,6 +19,10 @@
     }
 }
 @media (max-width: 1120px) {
+    .profile_info {
+        margin-left: 33%;
+        margin-right: 33%;
+    }
     .course_section .course_container .course_content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -31,6 +39,10 @@
     }
 }
 @media (max-width: 992px) {
+    .profile_info {
+        margin-left: 33%;
+        margin-right: 33%;
+    }
     .course_section .course_container .course_content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -126,7 +138,10 @@
 }
 
 @media (max-width: 768px) {
-
+    .profile_info {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .slider_section .detail-box h1 {
         font-size: 3.5rem;
         letter-spacing: .1rem;
@@ -222,7 +237,10 @@
 }
 
 @media (max-width: 576px) {
-
+    .profile_info {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .course_section .course_container .course_content {
         display: block;
     }
@@ -265,6 +283,10 @@
 }
 
 @media (max-width: 480px) {
+    .profile_info {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .course_section .course_container .course_content {
         display: block;
     }
@@ -295,6 +317,10 @@
 }
 
 @media (max-width: 400px) {
+    .profile_info {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .course_section .course_container .course_content {
         display: block;
     }
@@ -311,6 +337,10 @@
 }
 
 @media (max-width: 360px) {
+    .profile_info {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .course_section .course_container .course_content {
         display: block;
     }
