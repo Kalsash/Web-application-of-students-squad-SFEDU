@@ -1,4 +1,8 @@
 @media (max-width: 2048px) {
+    .section_directions {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .profile_info {
         margin-left: 33%;
         margin-right: 33%;
@@ -16,9 +20,17 @@
 
     .about_section .img_container .img-box {
         width: 80%;
+    }
+
+    .section_directions .carousel-inner {
+        max-height: 700px;
     }
 }
 @media (max-width: 1120px) {
+    .section_directions {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .profile_info {
         margin-left: 33%;
         margin-right: 33%;
@@ -37,8 +49,16 @@
     .about_section .img_container .img-box {
         width: 80%;
     }
+
+    .section_directions .carousel-inner {
+        max-height: 550px
+    }
 }
 @media (max-width: 992px) {
+    .section_directions {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     .profile_info {
         margin-left: 33%;
         margin-right: 33%;
@@ -135,9 +155,17 @@
     .contact_section::before {
         width: 53%;
     }
+
+    .section_directions .carousel-inner {
+        max-height: 500px
+    }
 }
 
 @media (max-width: 768px) {
+    .section_directions {
+    margin-left: 10%;
+    margin-right: 10%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -237,6 +265,10 @@
 }
 
 @media (max-width: 576px) {
+    .section_directions {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -283,6 +315,10 @@
 }
 
 @media (max-width: 480px) {
+    .section_directions {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -317,6 +353,10 @@
 }
 
 @media (max-width: 400px) {
+    .section_directions {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -337,6 +377,10 @@
 }
 
 @media (max-width: 360px) {
+    .section_directions {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
