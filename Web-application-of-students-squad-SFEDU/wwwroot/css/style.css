@@ -954,6 +954,70 @@ transform: scale(1.3);
 .footer_section a {
   color: #787878;
 }
+
+.about_page .history_container li::marker {
+    margin-right: 50px;
+    color: crimson;
+    /* UTF-8 escape sequence, соответствующая символу "Маркер списка" */
+    content: "\2022";
+    /* Делаем больше, чем основной текст в li */
+    font-size: 26px;
+    font-weight: 700;
+    /* Элемент вырван из потока, выравниваем отрицательным отступом */
+    left: -20px;
+    /* Высота строки и позиционирование необходимы для выравнивания по вертикали */
+    line-height: 18px;
+    position: absolute;
+    right: 100px;
+}
+.Achievements_ul li::marker{
+    /* UTF-8 escape sequence, соответствующая символу "Маркер списка" */
+    content: '✔';
+    color: forestgreen;
+}
+
+.Achievements_ul li ::before {
+    margin-right: 50px;
+    /* Делаем больше, чем основной текст в li */
+    font-size: 26px;
+    font-weight: 700;
+    /* Элемент вырван из потока, выравниваем отрицательным отступом */
+    left: -40px;
+    /* Высота строки и позиционирование необходимы для выравнивания по вертикали */
+    line-height: 18px;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+.about_page .achievements_container img {
+    margin-right: 50px;
+}
+
+.about_page .achievements_img img{
+    
+    width: 10px;
+}
+
+.about_page .achieve_table {
+    display: table;
+}
+
+.about_page .achieve_table {
+    display: table;
+    padding-top: 2%;
+    margin: 1% auto;
+}
+
+.about_page .achieve_table h3 {
+    display: table-cell;
+}
+
+.about_page .achieve_table .achievements_img {
+    display: table-cell;
+}
+
+
 @font-face{
  font-family: "AmaticSC-Bold";
  src: url("../fonts/AmaticSC-Bold.ttf") format("truetype"); 
