@@ -29,13 +29,78 @@ namespace Web_application_of_students_squad_SFEDU.Models
             }
             string pattern = "^[0-9]+$";
 
-            if (!Regex.IsMatch(password, pattern))
+            if (Regex.IsMatch(password, pattern))
             {
                 errors.Add(new IdentityError
                 {
-                    Description = "Пароль должен состоять только из цифр"
+                    Description = "Пароль не должен состоять только из цифр"
                 });
             }
+
+            if (!((password.Contains("@")) || (password.Contains("."))))
+            {
+                errors.Add(new IdentityError
+                {
+                    Description = "Пароль должен содержать как минимум один буквенно-цифровой символ"
+                });
+            }
+
+            string allowedSymbols = ".@abcdefghijklmnopqrstuvwxyz1234567890";
+
+            for (int i = 0; i < password.Length-1; i++) 
+            {
+                if (!allowedSymbols.Contains(password.ToLower()[i]))
+                {
+                    errors.Add(new IdentityError
+                    {
+                        Description = "Пароль содержит недопустимые символы"
+                    });
+                    break;
+                }
+
+            }
+
+            string LowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+            bool ContainLowerCase = false;
+
+            for (int i = 0; i < password.Length - 1; i++)
+            {
+                if (LowerCaseLetters.Contains(password[i]))
+                {
+                    ContainLowerCase = true;
+                }
+
+            }
+
+            if (!ContainLowerCase)
+            {
+                errors.Add(new IdentityError
+                {
+                    Description = "Пароль должен содержать как минимум одну строчную букву"
+                });
+
+            }
+
+            bool ContainUpperCase = false;
+
+            for (int i = 0; i < password.Length - 1; i++)
+            {
+                if (LowerCaseLetters.ToUpper().Contains(password[i]))
+                {
+                    ContainUpperCase = true;
+                }
+
+            }
+
+            if (!ContainUpperCase)
+            {
+                errors.Add(new IdentityError
+                {
+                    Description = "Пароль должен содержать как минимум одну заглавную букву"
+                });
+
+            }
+
             return Task.FromResult(errors.Count == 0 ?
                 IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
         }

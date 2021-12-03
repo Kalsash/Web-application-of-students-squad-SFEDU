@@ -19,6 +19,15 @@ namespace Web_application_of_students_squad_SFEDU.Models
                     Description = "Данный домен находится в спам-базе. Выберите другой почтовый сервис"
                 });
             }
+            
+            if (!user.Email.Contains("@"))
+            {
+                errors.Add(new IdentityError
+                {
+                    Description = "Введен неверный адрес электронной почты"
+                });
+            }
+            
             if (user.UserName.Contains("admin"))
             {
                 errors.Add(new IdentityError
