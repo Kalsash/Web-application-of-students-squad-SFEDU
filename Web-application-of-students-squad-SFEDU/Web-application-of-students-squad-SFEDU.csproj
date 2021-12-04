@@ -6,94 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Наработки\Аведик\.git\**" />
+    <Content Remove="Наработки\Аведик\.git\**" />
+    <EmbeddedResource Remove="Наработки\Аведик\.git\**" />
+    <None Remove="Наработки\Аведик\.git\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Account\Profile.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Наработки\Аведик\.git\COMMIT_EDITMSG" />
-    <None Include="Наработки\Аведик\.git\config" />
-    <None Include="Наработки\Аведик\.git\description" />
-    <None Include="Наработки\Аведик\.git\FETCH_HEAD" />
-    <None Include="Наработки\Аведик\.git\HEAD" />
-    <None Include="Наработки\Аведик\.git\hooks\applypatch-msg.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\commit-msg.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\fsmonitor-watchman.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\post-update.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\pre-applypatch.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\pre-commit.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\pre-merge-commit.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\pre-push.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\pre-rebase.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\pre-receive.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\prepare-commit-msg.sample" />
-    <None Include="Наработки\Аведик\.git\hooks\update.sample" />
-    <None Include="Наработки\Аведик\.git\index" />
-    <None Include="Наработки\Аведик\.git\info\exclude" />
-    <None Include="Наработки\Аведик\.git\logs\HEAD" />
-    <None Include="Наработки\Аведик\.git\logs\refs\heads\main" />
-    <None Include="Наработки\Аведик\.git\logs\refs\remotes\origin\main" />
-    <None Include="Наработки\Аведик\.git\objects\07\c00cd227da09d9e398ec89ae48e5d3c218010d" />
-    <None Include="Наработки\Аведик\.git\objects\09\30c4a089557f00ee1b6b5b058b13c7872b7473" />
-    <None Include="Наработки\Аведик\.git\objects\09\cd54756c44180ce09c833c520cc11d2b3440f1" />
-    <None Include="Наработки\Аведик\.git\objects\17\5f1290fcbdc159eb400757bb3ec76a9149922f" />
-    <None Include="Наработки\Аведик\.git\objects\17\8ce7be344f1d7d99d8f71151fbb8ea6425edd5" />
-    <None Include="Наработки\Аведик\.git\objects\1a\bf077ebb2baff8190999491472252b765c8a00" />
-    <None Include="Наработки\Аведик\.git\objects\2a\b71454ce42a008a37cef85809f8201055cf05b" />
-    <None Include="Наработки\Аведик\.git\objects\2e\4909179de5fdeb989a843b20a77af3a210133b" />
-    <None Include="Наработки\Аведик\.git\objects\34\ab1125588d95ddfa4463e538d0b14637f9dec3" />
-    <None Include="Наработки\Аведик\.git\objects\3e\2d1b304f9eec3b55e78906b9e427c3571eeec5" />
-    <None Include="Наработки\Аведик\.git\objects\41\8b112023bfe5a2003a78751857ac95d5537862" />
-    <None Include="Наработки\Аведик\.git\objects\44\147703f04632a668be62dbac5cdaebd067b380" />
-    <None Include="Наработки\Аведик\.git\objects\4f\8e2149ef87ad8700ec508afcf19632d0333d76" />
-    <None Include="Наработки\Аведик\.git\objects\52\9bf98dfacc7f628b1396aa86b75c347bab33df" />
-    <None Include="Наработки\Аведик\.git\objects\56\de63a9123d88d904501ec5de525fcd9d9ae850" />
-    <None Include="Наработки\Аведик\.git\objects\58\42541b4faa7985fcc68da7c4926118ff6142c4" />
-    <None Include="Наработки\Аведик\.git\objects\5d\597a8d233a2e1576821fd851d267b9a8e8c299" />
-    <None Include="Наработки\Аведик\.git\objects\5d\81bdb748013473d85e241cd7abd3ac08c0fd0d" />
-    <None Include="Наработки\Аведик\.git\objects\64\36218a1cbdc3aad3530cd025fe327435deb0cb" />
-    <None Include="Наработки\Аведик\.git\objects\67\c152062b79ba0bdf34b29f0cda46243d7eeaf6" />
-    <None Include="Наработки\Аведик\.git\objects\6a\606f30dbe85d23fcb55953cacfa4aeddb1d58a" />
-    <None Include="Наработки\Аведик\.git\objects\6f\9509c88bed7080d496fc5e1d87a9315e30549d" />
-    <None Include="Наработки\Аведик\.git\objects\70\6b9b79381bf3995f0d520b62b52c2531c057d1" />
-    <None Include="Наработки\Аведик\.git\objects\75\6239637e7c75948687fb8bc338ec7719fea3e3" />
-    <None Include="Наработки\Аведик\.git\objects\78\ce215ceff340105884d6f093a66bd7f14fd427" />
-    <None Include="Наработки\Аведик\.git\objects\79\5ff7e7d277d3c752aa8eba4214c58b2aa894b1" />
-    <None Include="Наработки\Аведик\.git\objects\7a\21b5143e2fc945f398321c51757039378f72b8" />
-    <None Include="Наработки\Аведик\.git\objects\7d\121a29a7eba69a30abcec24c9ddd3bfcb7a6fc" />
-    <None Include="Наработки\Аведик\.git\objects\8c\5d7858990c4fa99c9da6e8e1a7ee8eabb95ffa" />
-    <None Include="Наработки\Аведик\.git\objects\8e\3bf27b26c2c76254ebf993b28163ecd5dfc2e6" />
-    <None Include="Наработки\Аведик\.git\objects\8f\4758923aa884eb810ebd68c44c6ec6632c3adf" />
-    <None Include="Наработки\Аведик\.git\objects\96\1f7e99204080e7d7cabca5181a97eaabfb5f41" />
-    <None Include="Наработки\Аведик\.git\objects\97\6315c14874e1819669ab7dbb24396b8f3b1391" />
-    <None Include="Наработки\Аведик\.git\objects\9c\882ac73f9ea843b4bebb4cfe574012437aba51" />
-    <None Include="Наработки\Аведик\.git\objects\9f\7c3d8b89355d77dfddbce66a0557e1fda849e9" />
-    <None Include="Наработки\Аведик\.git\objects\a4\9f4f108fd0d7071c73594894e7515997d6ded3" />
-    <None Include="Наработки\Аведик\.git\objects\b4\0c8a22d94a88cc19f66ef216c810210c7838ee" />
-    <None Include="Наработки\Аведик\.git\objects\b8\8ed7b9733e864f0bd6a66ef4e609fcef74b759" />
-    <None Include="Наработки\Аведик\.git\objects\b9\bc177304a61074fa8263f0a9143cc4456f8004" />
-    <None Include="Наработки\Аведик\.git\objects\be\cb036dc2155a9fc3bd174dd42b85e45bae17ac" />
-    <None Include="Наработки\Аведик\.git\objects\bf\b204f814fde0359417144cf2cca98c90db7d3b" />
-    <None Include="Наработки\Аведик\.git\objects\c0\dd43489238644f72a5b407c82cc8e73aebcdc2" />
-    <None Include="Наработки\Аведик\.git\objects\c5\44bef3d048be5ec87ede529840dfe02592012d" />
-    <None Include="Наработки\Аведик\.git\objects\d8\f994d2417b575e326c9ac6d2e85b991cc3533e" />
-    <None Include="Наработки\Аведик\.git\objects\dc\a0b780f3f8f06031ee47dd26692c6f4f49f3f8" />
-    <None Include="Наработки\Аведик\.git\objects\df\e0770424b2a19faf507a501ebfc23be8f54e7b" />
-    <None Include="Наработки\Аведик\.git\objects\ea\155faf5b2d415f7b7e1fcf2177deb6d214eca0" />
-    <None Include="Наработки\Аведик\.git\objects\f3\afe977a1084969a7fe638468ff9c113cb420fd" />
-    <None Include="Наработки\Аведик\.git\objects\f9\05426b22cdf1ad5aa172a595c36c7ae9060f5b" />
-    <None Include="Наработки\Аведик\.git\refs\heads\main" />
-    <None Include="Наработки\Аведик\.git\refs\remotes\origin\main" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Наработки\Аведик\.git\objects\info\" />
-    <Folder Include="Наработки\Аведик\.git\objects\pack\" />
-    <Folder Include="Наработки\Аведик\.git\refs\tags\" />
   </ItemGroup>
 
 </Project>

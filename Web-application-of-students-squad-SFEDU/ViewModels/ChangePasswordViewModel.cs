@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Web_application_of_students_squad_SFEDU.ViewModels
 {
+    // Test
     public class ChangePasswordViewModel
     {
         public string Id { get; set; }
