@@ -37,13 +37,13 @@ namespace Web_application_of_students_squad_SFEDU.Models
                 });
             }
 
-            if (!((password.Contains("@")) || (password.Contains("."))))
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Пароль должен содержать как минимум один буквенно-цифровой символ"
-                });
-            }
+            //if (!((password.Contains("@")) || (password.Contains("."))))
+            //{
+            //    errors.Add(new IdentityError
+            //    {
+            //        Description = "Пароль должен содержать как минимум один буквенно-цифровой символ"
+            //    });
+            //}
 
             string allowedSymbols = ".@abcdefghijklmnopqrstuvwxyz1234567890";
 
