@@ -238,7 +238,7 @@ a:focus {
   -khtml-border-radius: 10px; /* закругл. для браузера Konquerer системы Linux */
   border-radius: 10px; /* закругление углов для всех, кто понимает */
   color: #ffffff;
-  transition: all s ease-out;
+  transition: all ease-out;
 -moz-transition: all 0.2s ease-out;
 -o-transition: all 0.2s ease-out;
 -webkit-transition: all 0.2s ease-out;
