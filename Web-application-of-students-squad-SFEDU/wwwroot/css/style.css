@@ -63,7 +63,7 @@ header.header_section {
   margin-top: 0px;
   height: 100vh;
   background-color: #b5caee;
-  background-image: url(../images/hero-bg.jpg);
+  background-image: url(../images/hero-bg.webp);
   background-size: cover;
 }
 
@@ -473,7 +473,7 @@ transform: scale(1.3);
 }
 
 .profile_section {
-    background-image: url(../images/login-bg.jpg);
+    background-image: url(../images/login-bg.webp);
     background-size: cover;
     color: #ffffff;
     padding-top: 15%;
