@@ -14,54 +14,7 @@
     <script src="~/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <!-- header section strats -->
-    <header class="header_section fixed-top">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <!-- эмблема ШСО -->
-                    <img src= "~/images/emblem.jpg" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav  ml-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="News">Новости</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Directions">Направления</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Structure">Структура</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="About">О нас</a>
-                        </li>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>
-                    </li>
-                        }
-                        else
-                        {                       
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
-                            </li>
-                        }
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!-- end header section -->
+   @await Html.PartialAsync("HeaderPartial");
 
     <div class="container" style="max-width: 100%; padding: 0">
         <main role="main">
@@ -69,88 +22,8 @@
         </main>
     </div>
 
-    <!-- footer section -->
-    <footer>
-        <section class="info_section" style="padding : 40px 0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="info_menu">
-                            <h5>
-                                Навигация
-                            </h5>
-                            <ul class="navbar-nav ">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="News">Новости</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Directions">Направления</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Structure">Структура</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="About">О нас</a>
-                                </li>
-                                @if (User.Identity.IsAuthenticated)
-                                {
-                                    <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>
-                                    </li>
-                                }
-                                else
-                                {
-                                    <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="info_course">
-                            <h5>
-                                РСО - это
-                            </h5>
-                            <p>
-                                самая уютная атмосфера, самые искренние эмоции,
-                                самые теплые воспоминания и самые настоящие друзья!
-                                Это возможность стать частью одной большой семьи, найти себя,
-                                найти единомышленников и стать частью истории!
-                            </p>
-                        </div>
-                    </div>
+   @await Html.PartialAsync("FooterPartial");
 
-                    <div class="col-md-5 offset-md-1">
-                        <div class="info_news">
-                            <h5>
-                                Обратная связь
-                            </h5>
-                            <div class="info_contact">
-                                <a href="" style="text-decoration: underline">
-                                    ОУ "ЮФУ" 115280, Москва, Ленинградская слобода 19,1 этаж
-                                </a>
-                                <a href="" style="text-decoration: underline">
-                                    demo@gmail.com
-                                </a>
-
-                                <a href="">
-                                    Контактный центр: <span style="text-decoration: underline">+01 1234567890</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </footer>
-    <!-- footer section -->
     @RenderSection("Scripts", required: false)
 </body>
 </html>
