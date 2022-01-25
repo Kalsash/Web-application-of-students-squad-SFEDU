@@ -1,6 +1,6 @@
 @media (max-width: 2048px) {
     .row1 .history_container {
-        background-image: url(../images/svitok.png);
+        background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-origin: border-box;
@@ -37,7 +37,7 @@
 }
 @media (max-width: 1120px) {
     .row1 .history_container {
-        background-image: url(../images/svitok.png);
+        background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-origin: border-box;
@@ -74,7 +74,7 @@
 }
 @media (max-width: 992px) {
     .row1 .history_container {
-        background-image: url(../images/svitok.png);
+        background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-origin: border-box;
@@ -190,7 +190,7 @@
 
 @media (max-width: 768px) {
     .row1 .history_container {
-        background-image: url(../images/svitok.png);
+        background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-origin: border-box;
@@ -302,7 +302,7 @@
 
 @media (max-width: 576px) {
     .row1 .history_container {
-        background-image: url(../images/svitok.png);
+        background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-origin: border-box;
