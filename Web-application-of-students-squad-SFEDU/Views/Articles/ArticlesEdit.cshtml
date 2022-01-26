@@ -1,5 +1,8 @@
 ﻿@model Article
 
+
+<script src="~/js/ckeditor/ckeditor.js"></script>
+
 <div>
     <h1>Редактировать статью</h1>
     <div>
@@ -21,3 +24,11 @@
         </form>
     </div>
 </div>
+
+
+<script>
+    window.onload = function() {
+        var newCKEdit = CKEDITOR.replace('@Html.IdFor(x=>x.Text)');
+        newCKEdit.updateElement();
+    }
+</script>

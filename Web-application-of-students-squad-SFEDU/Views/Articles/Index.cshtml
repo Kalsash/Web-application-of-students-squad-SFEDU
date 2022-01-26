@@ -18,6 +18,7 @@
     {
         <div>
             @entity.Title
+            @Html.Raw(@entity.Text)
             |
             <a asp-controller="Articles" asp-action="ArticlesEdit" asp-route-id="@entity.Id">редактировать</a>
             |
@@ -28,3 +29,4 @@
         </div>
     }
 </div>
+
