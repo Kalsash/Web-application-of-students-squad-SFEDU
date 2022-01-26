@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,21 +12,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web_application_of_students_squad_SFEDU.Models;
+using Web_application_of_students_squad_SFEDU.Service;
 
 namespace Web_application_of_students_squad_SFEDU
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
         public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public void ConfigureServices(IServiceCollection services)
         {
+            ////подключаем конфиг из appsetting.json
+            //Configuration.Bind("Project", new Config());
+
             services.AddTransient<IUserValidator<User>, CustomUserValidator>();
+
+            services.AddTransient<ArticlesRepository>();
             //services.AddTransient<IPasswordValidator<User>,
             //CustomPasswordValidator>(serv => new CustomPasswordValidator(6));   
             services.AddTransient<IPasswordValidator<User>,
@@ -45,21 +48,32 @@ namespace Web_application_of_students_squad_SFEDU
                 opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz"; // допустимые символы
             }).AddEntityFrameworkStores<ApplicationContext>();
 
-            services.AddControllersWithViews();
+            //добавляем сервисы для контроллеров и представлений (MVC)
+            services.AddControllersWithViews()
+                // совместимость с версией 3.0 для долгосрочной поддержки проекта
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
+            //в процессе разработки нам важно видеть какие именно ошибки
+            if (env.IsDevelopment())
+                app.UseDeveloperExceptionPage();
 
             app.UseHttpsRedirection();
+
+            //подключаем поддержку статичных файлов в приложении (css, js и т.д.)
             app.UseStaticFiles();
 
+            //подключаем систему маршрутизации
             app.UseRouting();
 
-            app.UseAuthentication();    // подключение аутентификации
+            //подключаем аутентификацию и авторизацию
+            app.UseCookiePolicy();
+            app.UseAuthentication();    
             app.UseAuthorization();
 
+            //регистриуруем нужные нам маршруты (ендпоинты)
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
