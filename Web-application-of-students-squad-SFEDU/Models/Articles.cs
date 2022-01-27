@@ -14,5 +14,8 @@ namespace Web_application_of_students_squad_SFEDU.Models
 
         [Display(Name = "Содержание")]
         public string Text { get; set; }
+
+        //[Display(Name = "Титульная картинка")]
+        //public virtual string TitleImagePath { get; set; }
     }
 }

@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web_application_of_students_squad_SFEDU.Models;
-using Web_application_of_students_squad_SFEDU.Service;
+
 
 namespace Web_application_of_students_squad_SFEDU
 {
@@ -23,14 +23,11 @@ namespace Web_application_of_students_squad_SFEDU
 
         public void ConfigureServices(IServiceCollection services)
         {
-            ////подключаем конфиг из appsetting.json
-            //Configuration.Bind("Project", new Config());
 
             services.AddTransient<IUserValidator<User>, CustomUserValidator>();
 
             services.AddTransient<ArticlesRepository>();
-            //services.AddTransient<IPasswordValidator<User>,
-            //CustomPasswordValidator>(serv => new CustomPasswordValidator(6));   
+  
             services.AddTransient<IPasswordValidator<User>,
             CustomPasswordValidator>(serv => new CustomPasswordValidator(6));
 

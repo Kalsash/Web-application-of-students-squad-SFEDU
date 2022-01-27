@@ -17,7 +17,9 @@
     @foreach (Article entity in Model)
     {
         <div>
-            @entity.Title
+            <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                      @entity.Title>
+                    </a>
             @Html.Raw(@entity.Text)
             |
             <a asp-controller="Articles" asp-action="ArticlesEdit" asp-route-id="@entity.Id">редактировать</a>

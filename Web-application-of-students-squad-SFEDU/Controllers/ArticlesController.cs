@@ -13,10 +13,15 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         }
 
         //выбираем все записи из БД и передаем их в представление
-        public IActionResult Index()
+        public IActionResult Index(Guid id)
         {
             var model = articlesRepository.GetArticles();
-            return View(model);
+                if (id != default)
+                {
+                    return View("Show", articlesRepository.GetArticleById(id));
+                }
+                return View(model);
+
         }
 
         public IActionResult ArticlesEdit(Guid id)
