@@ -8,19 +8,19 @@
 
 <div class="text-center">
 <div>
-    <a asp-controller="Articles" asp-action="ArticlesEdit">Новая статья</a>
+    <a asp-controller="News" asp-action="NewsEdit">Новая статья</a>
 </div>
     @foreach (Article entity in Model)
     {
         <div>
-            <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+            <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
                       @entity.Title
                     </a>
             @*@Html.Raw(@entity.Text)*@
             |
-            <a asp-controller="Articles" asp-action="ArticlesEdit" asp-route-id="@entity.Id">редактировать</a>
+            <a asp-controller="News" asp-action="NewsEdit" asp-route-id="@entity.Id">редактировать</a>
             |
-            <form method="post" asp-controller="Articles" asp-action="ArticlesDelete">
+            <form method="post" asp-controller="News" asp-action="NewsDelete">
                 <input type="hidden" name="Id" value="@entity.Id"/>
                 <input type="submit" value="удалить"/>
             </form>
