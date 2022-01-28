@@ -1,0 +1,30 @@
+﻿@model IQueryable<Article>
+
+<h1>Панель Новостей</h1>
+
+<h2>Панель Новостей</h2>
+
+
+
+<div class="text-center">
+<div>
+    <a asp-controller="Articles" asp-action="ArticlesEdit">Новая статья</a>
+</div>
+    @foreach (Article entity in Model)
+    {
+        <div>
+            <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                      @entity.Title
+                    </a>
+            @*@Html.Raw(@entity.Text)*@
+            |
+            <a asp-controller="Articles" asp-action="ArticlesEdit" asp-route-id="@entity.Id">редактировать</a>
+            |
+            <form method="post" asp-controller="Articles" asp-action="ArticlesDelete">
+                <input type="hidden" name="Id" value="@entity.Id"/>
+                <input type="submit" value="удалить"/>
+            </form>
+        </div>
+    }
+</div>
+
