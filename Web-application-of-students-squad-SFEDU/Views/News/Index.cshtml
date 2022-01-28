@@ -14,9 +14,12 @@
     {
         <div>
             <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
-                      @entity.Title
+            <h4>@entity.Title</h4>
+             </a>
+                    <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
+                        <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
                     </a>
-            @*@Html.Raw(@entity.Text)*@
+                    
             |
             <a asp-controller="News" asp-action="NewsEdit" asp-route-id="@entity.Id">редактировать</a>
             |

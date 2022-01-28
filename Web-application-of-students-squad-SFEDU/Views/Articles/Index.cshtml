@@ -15,11 +15,8 @@
                       @entity.Title
             </a>
         @*@Html.Raw(@entity.Text)*@
-        @entity.TitleImagePath
         <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
-
                         <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
-                        @*<img src= "~/images/emblem.jpg" />*@
                     </a>
         </div>
     }

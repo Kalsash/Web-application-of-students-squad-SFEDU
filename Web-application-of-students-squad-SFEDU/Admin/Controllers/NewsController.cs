@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.IO;
 using Web_application_of_students_squad_SFEDU.Models;
 
 namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
@@ -9,9 +12,11 @@ namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
     public class NewsController : Controller
     {
         private readonly ArticlesRepository articlesRepository;
-        public NewsController(ArticlesRepository articlesRepository)
+        private readonly IWebHostEnvironment hostingEnvironment;
+        public NewsController(ArticlesRepository articlesRepository, IWebHostEnvironment hostingEnvironment)
         {
             this.articlesRepository = articlesRepository;
+            this.hostingEnvironment = hostingEnvironment;
         }
 
         //выбираем все записи из БД и передаем их в представление
@@ -22,7 +27,7 @@ namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
             {
                 return View("Show", articlesRepository.GetArticleById(id));
             }
-            return View(model); ;
+            return View(model); 
 
         }
 
@@ -33,14 +38,21 @@ namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
             return View(model);
         }
         [HttpPost] //в POST-версии метода сохраняем/обновляем запись в БД
-        public IActionResult NewsEdit(Article model)
+        public IActionResult NewsEdit(Article model, IFormFile titleImageFile)
         {
             if (ModelState.IsValid)
             {
+                if (titleImageFile != null)
+                {
+                    model.TitleImagePath = titleImageFile.FileName;
+                    using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleImageFile.FileName), FileMode.Create))
+                    {
+                        titleImageFile.CopyTo(stream);
+                    }
+                }
                 articlesRepository.SaveArticle(model);
                 return RedirectToAction("Index");
             }
-
             return View(model);
         }
 

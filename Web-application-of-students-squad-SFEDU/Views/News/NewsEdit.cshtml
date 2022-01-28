@@ -6,8 +6,7 @@
 <div>
     <h1>Редактировать статью</h1>
     <div>
-        <form asp-controller="News" asp-action="NewsEdit" method="post">
-            <input type="hidden" asp-for="Id" />
+        <form asp-controller="News" asp-action="NewsEdit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="All"></div>
 
             <div>
@@ -27,7 +26,6 @@
                     <img class="img-block" src="~/images/@Model.TitleImagePath" />
                 </div>
             </div>
-
 
             <input type="submit" value="Сохранить" />
         </form>
