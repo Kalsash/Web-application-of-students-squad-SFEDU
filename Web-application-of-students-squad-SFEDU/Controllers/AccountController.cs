@@ -26,7 +26,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             return View();
         }
 
-        public IActionResult Profile() => View(_userManager.Users.ToList());
+        //public IActionResult Profile() => View(_userManager.Users.ToList());
 
 
         [HttpPost]

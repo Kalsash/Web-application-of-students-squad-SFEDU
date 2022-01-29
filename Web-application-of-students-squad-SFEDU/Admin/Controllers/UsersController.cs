@@ -7,7 +7,7 @@ using Web_application_of_students_squad_SFEDU.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 namespace Web_application_of_students_squad_SFEDU.Controllers
 {
-   // [Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public class UsersController : Controller
     {
       

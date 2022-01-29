@@ -10,7 +10,7 @@ using Web_application_of_students_squad_SFEDU.ViewModels;
 
 namespace Web_application_of_students_squad_SFEDU.Controllers
 {
-   // [Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
