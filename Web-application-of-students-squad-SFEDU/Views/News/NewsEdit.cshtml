@@ -7,6 +7,9 @@
     <h1>Редактировать статью</h1>
     <div>
         <form asp-controller="News" asp-action="NewsEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id"/>
+            <input type="hidden" asp-for="TitleImagePath" />
+
             <div asp-validation-summary="All"></div>
 
             <div>
