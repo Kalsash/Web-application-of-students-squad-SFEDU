@@ -45,9 +45,9 @@ namespace Web_application_of_students_squad_SFEDU.Models
             //    });
             //}
 
-            string allowedSymbols = ".@abcdefghijklmnopqrstuvwxyz1234567890";
+            string allowedSymbols = ".@abcdefghijklmnopqrstuvwxyz1234567890*#$%^&!?";
 
-            for (int i = 0; i < password.Length-1; i++) 
+            for (int i = 0; i < password.Length - 1; i++)
             {
                 if (!allowedSymbols.Contains(password.ToLower()[i]))
                 {
@@ -57,7 +57,6 @@ namespace Web_application_of_students_squad_SFEDU.Models
                     });
                     break;
                 }
-
             }
 
             string LowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -102,7 +101,8 @@ namespace Web_application_of_students_squad_SFEDU.Models
             }
 
             return Task.FromResult(errors.Count == 0 ?
-                IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
+                IdentityResult.Success : IdentityResult.Failed(errors.ToArray())); 
+            //return Task.FromResult(IdentityResult.Success);
         }
     }
 }

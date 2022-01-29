@@ -53,6 +53,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
             }
             return Task.FromResult(errors.Count == 0 ?
             IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
+            //return Task.FromResult(IdentityResult.Success);
         }
     }
 }
