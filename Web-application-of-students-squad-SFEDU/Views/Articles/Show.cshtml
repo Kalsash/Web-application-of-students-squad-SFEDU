@@ -1,11 +1,12 @@
 ﻿@model Article
-
-
-<div>
-    <h2>
-        @Model.Title
-    </h2>
-</div>
-<div>
-    @Html.Raw(Model.Text)
-</div>
+    <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
+<section class="section_directions">
+    <div style=" margin-top: 64px;">
+        <h2 style=" text-align: center">
+            @Model.Title
+        </h2>
+    </div>
+    <div>
+        @Html.Raw(Model.Text)
+    </div>
+</section>

@@ -1,24 +1,25 @@
 ﻿@model IQueryable<Article>
 
-<div class="text-center">
-<h1>
-    Новости 
-</h1>
+    <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
 
-<h1>
-    Новости
-</h1>
-    @foreach (Article entity in Model)
-    {
-        <div>
-            <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
-                      @entity.Title
-            </a>
-        @*@Html.Raw(@entity.Text)*@
-        <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
-                        <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
-                    </a>
-        </div>
-    }
+<div class="text-center section_news" style="margin-top: 100px">
+    <h1 style="text-decoration: underline">
+        Новости
+    </h1>
+    <div class="four_news">
+        @foreach (Article entity in Model)
+        {
+            <div class="one_news">
+                @*@Html.Raw(@entity.Text)*@
+                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                    <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
+                </a>
+                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                    @entity.Title
+                </a>
+            </div>
+            //<div style=" width: auto; height: 4px; background-color: red; margin: 5px 0px; "></div>
+        }
+    </div>
 </div>
 

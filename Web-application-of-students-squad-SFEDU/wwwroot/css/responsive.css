@@ -12,6 +12,10 @@
         margin-left: 15%;
         margin-right: 15%;
     }
+    .section_news {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
     .profile_info {
         margin-left: 33%;
         margin-right: 33%;
@@ -49,6 +53,10 @@
         margin-left: 15%;
         margin-right: 15%;
     }
+    .section_news {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
     .profile_info {
         margin-left: 33%;
         margin-right: 33%;
@@ -85,6 +93,10 @@
     .section_directions {
         margin-left: 15%;
         margin-right: 15%;
+    }
+    .section_news {
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .profile_info {
         margin-left: 33%;
@@ -202,6 +214,10 @@
     margin-left: 10%;
     margin-right: 10%;
     }
+    .section_news {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -314,6 +330,10 @@
         margin-left: 7%;
         margin-right: 7%;
     }
+    .section_news {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -373,6 +393,10 @@
         margin-left: 4%;
         margin-right: 4%;
     }
+    .section_news {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -421,6 +445,10 @@
         margin-left: 4%;
         margin-right: 4%;
     }
+    .section_news {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
@@ -452,6 +480,10 @@
     }
 
     .section_directions {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .section_news {
         margin-left: 4%;
         margin-right: 4%;
     }
