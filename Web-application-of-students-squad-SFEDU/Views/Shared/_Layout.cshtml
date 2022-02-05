@@ -8,13 +8,13 @@
     <link href="~/css/bootstrap.css" rel="stylesheet" />
     <link href="~/css/responsive.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
-    <a href="~/fonts/AmaticSC-Bold.ttf"></a>
-    <a href="~/fonts/Lora-VariableFont_wght.ttf"></a>
+    <link href="~/fonts/AmaticSC-Bold.ttf">
+    <link href="~/fonts/Lora-VariableFont_wght.ttf">
     <script src="~/js/bootstrap.js"></script>
     <script src="~/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-   @await Html.PartialAsync("HeaderPartial");
+   @await Html.PartialAsync("HeaderPartial")
 
     <div class="container" style="max-width: 100%; padding: 0">
         <main role="main">
@@ -22,7 +22,7 @@
         </main>
     </div>
 
-   @await Html.PartialAsync("FooterPartial");
+   @await Html.PartialAsync("FooterPartial")
 
     @RenderSection("Scripts", required: false)
 </body>
