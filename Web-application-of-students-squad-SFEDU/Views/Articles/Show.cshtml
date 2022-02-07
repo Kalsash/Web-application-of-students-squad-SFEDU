@@ -1,12 +1,14 @@
 ﻿@model Article
     <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
-<section class="section_directions">
-    <div style=" margin-top: 64px;">
-        <h2 style=" text-align: center">
-            @Model.Title
-        </h2>
-    </div>
-    <div>
-        @Html.Raw(Model.Text)
-    </div>
-</section>
+    <section class="section_directions">
+        <div style="align-content: center">
+            <p style=" text-align: center; font-size: 60px">
+                @Model.Title
+            </p>
+            <img src="~/images/@Model.TitleImagePath" alt="" class="img-fluid" style="max-height: 50vh; max-width: 70%; display: block; margin-left: auto; margin-right: auto;"/>
+        </div>
+        <div>
+            @Html.Raw(Model.Text)
+        </div>
+        
+    </section>

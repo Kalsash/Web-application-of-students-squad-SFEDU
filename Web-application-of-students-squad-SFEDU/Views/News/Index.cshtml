@@ -1,30 +1,34 @@
 ﻿@model IQueryable<Article>
-<h2 style="margin-top: 64px ">Панель Новостей</h2>
+<h2 style="margin-top: 64px; text-decoration: underline" class="text-center">Панель Новостей</h2>
 
 
 
 <div class="text-center">
-<div>
-    <a asp-controller="News" asp-action="NewsEdit">Новая статья</a>
+<div style="margin-bottom: 20px">
+    <a asp-controller="News" asp-action="NewsEdit" style="font-weight: bold; border: solid 3px blue; border-radius: 10px; padding: 3px 6px;">НОВАЯ СТАТЬЯ</a>
 </div>
     @foreach (Article entity in Model)
     {
-        <div>
-            <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
-            <h4>@entity.Title</h4>
-             </a>
-                    <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
-                        <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
-                    </a>
-                    
-            |
-            <a asp-controller="News" asp-action="NewsEdit" asp-route-id="@entity.Id">редактировать</a>
-            |
-            <form method="post" asp-controller="News" asp-action="NewsDelete">
-                <input type="hidden" name="Id" value="@entity.Id"/>
-                <input type="submit" value="удалить"/>
-            </form>
-        </div>
+<div>
+    @*<a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">*@
+    <h4>@entity.Title</h4>
+    @*</a>
+        <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
+            <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
+        </a>*@
+    <div style="margin-bottom: 5px">
+        |
+        <a asp-controller="News" asp-action="NewsEdit" asp-route-id="@entity.Id">Редактировать</a>
+        |
+    </div>
+    <form method="post" asp-controller="News" asp-action="NewsDelete" style="margin-bottom: 20px">
+        <input type="hidden" name="Id" value="@entity.Id" />
+        <input type="submit" value="удалить" />
+    </form>
+
+</div>
+<div style="background-color: black; height: 3px; width: 50%; margin-left: 25%; margin-bottom: 20px"></div>
     }
 </div>
+
 

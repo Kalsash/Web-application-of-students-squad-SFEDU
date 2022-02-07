@@ -2,10 +2,10 @@
 @{
     ViewBag.Title = "Список пользователей";
 }
-<div style="margin-top: 64px">
+<div style="margin-top: 94px">
     <a asp-action="Create">Добавить пользователя</a>
 </div>
-<table class="table">
+<table class="table" style="margin-bottom: 5%">
     <tr><th>Email</th><th>Год</th><th></th></tr>
     @foreach (var user in Model)
     {

@@ -1,9 +1,9 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @model Web_application_of_students_squad_SFEDU.ViewModels.ChangeRoleViewModel
 
-<h2 style="margin-top: 64px">Изменение ролей для пользователя @Model.UserEmail</h2>
+<h2 style="margin-top: 94px">Изменение ролей для пользователя @Model.UserEmail</h2>
 
-<form asp-action="Edit" method="post">
+<form asp-action="Edit" method="post"  style="margin-bottom: 12%">
     <input type="hidden" name="userId" value="@Model.UserId" />
     <div class="form-group">
         @foreach (IdentityRole role in Model.AllRoles)
