@@ -6,19 +6,18 @@
     <h1 style="text-decoration: underline">
         Новости
     </h1>
-    <div class="four_news">
+    <div class="row archive">
         @foreach (Article entity in Model)
         {
-            <div class="one_news">
+            <section class="col-md-6 col-lg-4 one_news">
                 @*@Html.Raw(@entity.Text)*@
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
-                    <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
+                    <img src="~/images/@entity.TitleImagePath" alt="" class="left img-fluid" />
                 </a>
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
                     @entity.Title
                 </a>
-            </div>
-            //<div style=" width: auto; height: 4px; background-color: red; margin: 5px 0px; "></div>
+            </section>
         }
     </div>
 </div>
