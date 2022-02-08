@@ -110,7 +110,20 @@
             @{
                 int k = 0;
             }
-
+            @foreach (Article entity in Model)
+            {
+                k++;
+                <section class="col-md-6 col-lg-4 one_news">
+                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                    <img src="~/images/@entity.TitleImagePath" alt="" class="left img-fluid" />
+                </a>
+                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                    @entity.Title
+                </a>
+                @if(k == 6)
+                    break;
+            </section>
+             }
     </div> 
         @if (k == 0)
         {
