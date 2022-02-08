@@ -17,19 +17,33 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly ILogger<HomeController> _logger;
+        private readonly ArticlesRepository articlesRepository;
 
         // Constructor
-        public HomeController(ILogger<HomeController> logger, UserManager<User> userManager, SignInManager<User> signInManager)
+        public HomeController(ILogger<HomeController> logger, UserManager<User> userManager, 
+            SignInManager<User> signInManager, ArticlesRepository articlesRepository)
         {
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
+            this.articlesRepository = articlesRepository;
         }
 
-        // Главная
-        public IActionResult Index()
+        //// Главная
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+
+        //выбираем все записи из БД и передаем их в представление
+        public IActionResult Index(Guid id)
         {
-            return View();
+            var model = articlesRepository.GetArticles();
+            if (id != default)
+            {
+                return View("Show", articlesRepository.GetArticleById(id));
+            }
+            return View(model);
         }
 
         // Направления
@@ -190,5 +204,6 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             return View(model);
         }
         //////////// Users ///////////////////
+        
     }
 }

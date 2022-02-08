@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IQueryable<Article>
+@{
     ViewData["Title"] = "Home Page";
 }
 <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
@@ -104,7 +105,16 @@
                 Тут вы можете узнать всё о наших последних новостях
             </p>
         </div>
-        <div class="course_container">
+    <div class="row archive">
+       
+            @{
+                int k = 0;
+            }
+
+    </div> 
+        @if (k == 0)
+        {
+            <div class="course_container">
             <div class="course_content">
                 <div class="box">
                     <img src="images/c-0.jpg" alt="" />
@@ -170,8 +180,10 @@
                 </div>
             </div>
         </div>
+            
+        }
         <div class="btn-box">
-            <a href="">
+            <a asp-controller="Articles" asp-action="Index" asp-route-id="">
                 Читать больше...
             </a>
         </div>
