@@ -43,7 +43,10 @@ namespace Web_application_of_students_squad_SFEDU
                 opts.Password.RequireDigit = true; // требуются ли цифры
                 opts.User.RequireUniqueEmail = true;    // уникальный email
                 opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz"; // допустимые символы
-            }).AddEntityFrameworkStores<ApplicationContext>();
+            }).AddEntityFrameworkStores<ApplicationContext>()
+            .AddDefaultTokenProviders();
+            services.AddControllersWithViews();
+
 
             //добавляем сервисы для контроллеров и представлений (MVC)
             services.AddControllersWithViews()
