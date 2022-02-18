@@ -11,7 +11,7 @@ namespace Web_application_of_students_squad_SFEDU
     {
         public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
-            string adminEmail = "Kalsash";
+            string adminEmail = "akalinin@sfedu.ru";
             string password = "IamTheBest1337Admin!";
             int year = 2000;
             if (await roleManager.FindByNameAsync("admin") == null)
@@ -24,7 +24,7 @@ namespace Web_application_of_students_squad_SFEDU
             }
             if (await userManager.FindByNameAsync(adminEmail) == null)
             {
-                User admin = new User { Email = adminEmail, UserName = adminEmail, Year = year };
+                User admin = new User { Email = adminEmail, UserName = adminEmail, Year = year, EmailConfirmed = true };
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {
