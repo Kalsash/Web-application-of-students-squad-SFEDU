@@ -396,6 +396,7 @@
         border-bottom: none;
         border-top: none;
         padding: 0 5%;
+        color: white;
     }
     .section_directions {
         margin-left: 4%;
@@ -454,6 +455,7 @@
         border-bottom: none;
         border-top: none;
         padding: 0 5%;
+        color: white;
     }
 
     .section_directions {
@@ -497,27 +499,32 @@
         border-bottom: none;
         border-top: none;
         padding: 0 5%;
+        color: white;
     }
 
     .section_directions {
         margin-left: 4%;
         margin-right: 4%;
     }
+
     .section_news {
         margin-left: 4%;
         margin-right: 4%;
     }
+
     .profile_info {
         margin-left: 15%;
         margin-right: 15%;
     }
+
     .course_section .course_container .course_content {
         display: block;
     }
 
-	.about_section .img_container .img-box {
-  width: 100%;
-}
+    .about_section .img_container .img-box {
+        width: 100%;
+    }
+
     .slider_section .detail-box h1 {
         font-size: 1.9rem;
         letter-spacing: 1px;
@@ -526,13 +533,13 @@
     .contact_section::before {
         height: 26%;
     }
+
     .col-md-6 {
         flex: 0 0 70%;
         max-width: 70%;
     }
-
+}
 @media (min-width: 1200px) {
-
     .container {
         max-width: 1170px;
     }

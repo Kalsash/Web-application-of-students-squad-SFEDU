@@ -233,6 +233,7 @@ a:focus {
   display: flex;
   background-color: #cf2f1d;
   border: 4px solid #ffffff;
+  font-weight: 500;
   -moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
   -webkit-border-radius: 10px; /* закругл. для старых Chrome и Safari */
   -khtml-border-radius: 10px; /* закругл. для браузера Konquerer системы Linux */
@@ -1043,12 +1044,21 @@ img {
     flex-wrap: wrap;
 }
 
-    @font-face {
-        font-family: "AmaticSC-Bold";
-        src: url("../fonts/AmaticSC-Bold.ttf") format("truetype");
-        font-style: normal;
-        font-weight: normal;
-    }
+img.img-fluid.nwsborder {
+    border-radius: 20px;
+    border: solid 5px transparent;
+}
+    
+img.img-fluid.nwsborder:hover {
+    border: solid 5px white;
+}
+
+@font-face {
+    font-family: "AmaticSC-Bold";
+    src: url("../fonts/AmaticSC-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 @font-face{
  font-family: "Lora";
  src: url("../fonts/Lora-VariableFont_wght.ttf") format("truetype"); 

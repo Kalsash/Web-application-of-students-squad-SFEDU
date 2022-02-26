@@ -2,10 +2,10 @@
 
     <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
 
-<div class="text-center section_news" style="margin-top: 100px">
-    <h1 style="text-decoration: underline; color: blue; margin-bottom: 20px">
+<div class="text-center section_news" style="margin-top: 100px; background-color: #ffffffce">
+    <p style=" color: darkblue; margin-bottom: 20px; font-size: 50px; font-weight: bolder">
         Новости
-    </h1>
+    </p>
     <div class="row archive">
         @foreach (Article entity in Model)
         {
@@ -14,7 +14,7 @@
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
                     <img src="~/images/@entity.TitleImagePath" alt="" class="left img-fluid" />
                 </a>
-                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id" style="color: darkblue; font-size: 20px; font-weight:bold">
                     @entity.Title
                 </a>
             </section>
