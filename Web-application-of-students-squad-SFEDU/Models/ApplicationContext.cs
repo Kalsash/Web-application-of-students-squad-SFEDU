@@ -24,8 +24,8 @@ namespace Web_application_of_students_squad_SFEDU.Models
             modelBuilder.Entity<Article>().HasData(new Article
             {
                 Id = new Guid("716C2E99-6F6C-4472-81A5-43C56E11637C"),
-                Title = "Новый спутник запущен на орбиту",
-                Text = "text text",
+                Title = "Тестовая новость",
+                Text = "Добавьте какую-нибудь новость в панели администратора!",
                 TitleImagePath = "emblem.jpg"
             });
 
