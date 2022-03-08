@@ -101,6 +101,68 @@ header.header_section {
   color : #D73323;
 }
 
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item .submenu {
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: .6s ease-in-out;
+    position: absolute;   
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    border-radius: 0 0 10px 10px;
+    padding-left: 0;
+    border-top: 4px solid #cf2f1d;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+}
+
+.nav-item:hover > ul {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+    background-color: #D73323;
+}
+
+.nav-item .submenu li:hover {
+    background-color: white;
+}
+
+.nav-item .submenu li {
+    min-width: 140px;
+    float: none;
+    display: list-item;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.nav-item ul li a {
+    color: white;
+    font-size: 17px;
+}
+
+.nav-item ul li:hover a {
+    color: #D73323;
+}
+
+.nav-item:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.down:after {
+    content: "▼";
+    margin-left: 4px;
+    font-family: FontAwesome;
+    font-size: 15px;
+}
+
 .custom_nav-container .form-inline {
   padding-top: 30px;
 }
@@ -1052,6 +1114,7 @@ img.img-fluid.nwsborder:hover {
     max-width: 100px;
     /*max-height: 169px;*/
 }
+
 @font-face {
     font-family: "AmaticSC-Bold";
     src: url("../fonts/AmaticSC-Bold.ttf") format("truetype");
