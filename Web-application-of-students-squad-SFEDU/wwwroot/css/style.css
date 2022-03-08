@@ -214,7 +214,7 @@ a:focus {
 }
 
 .slider_section .detail-box h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 0.7rem;
   /*font-weight: bold;*/
   text-transform: uppercase;
@@ -691,9 +691,10 @@ transform: scale(1.3);
 }
 
 .client_section .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
 }
 
 .client_section .box .img-box {
@@ -743,7 +744,6 @@ transform: scale(1.3);
 		  align-items: flex-end;
 }
 
-.client_section #carouselExampleControls .btn-box .carousel-control-prev,
 .client_section #carouselExampleControls .btn-box .carousel-control-next {
   position: relative;
   width: 45px;
@@ -755,16 +755,11 @@ transform: scale(1.3);
   background-repeat: no-repeat;
 }
 
-.client_section #carouselExampleControls .btn-box .carousel-control-prev:hover,
 .client_section #carouselExampleControls .btn-box .carousel-control-next:hover {
   background-color: #3f48cc;
   border-radius: 25px;
   transform: rotate(360deg);
   transition: 0.5s
-}
-
-.client_section #carouselExampleControls .btn-box .carousel-control-prev {
-  background-image: url(../images/prev.png);
 }
 
 .client_section #carouselExampleControls .btn-box .carousel-control-next {
@@ -1053,6 +1048,10 @@ img.img-fluid.nwsborder:hover {
     border: solid 5px white;
 }
 
+.client_section .img-box img{
+    max-width: 100px;
+    /*max-height: 169px;*/
+}
 @font-face {
     font-family: "AmaticSC-Bold";
     src: url("../fonts/AmaticSC-Bold.ttf") format("truetype");
