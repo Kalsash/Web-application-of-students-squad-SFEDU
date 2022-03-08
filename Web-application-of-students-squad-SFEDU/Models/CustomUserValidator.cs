@@ -12,13 +12,6 @@ namespace Web_application_of_students_squad_SFEDU.Models
         {
             List<IdentityError> errors = new List<IdentityError>();
 
-            if (user.Email.ToLower().EndsWith("@spam.com"))
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Данный домен находится в спам-базе. Выберите другой почтовый сервис"
-                });
-            }
             if (!user.Email.ToLower().EndsWith("@sfedu.ru"))
             {
                 errors.Add(new IdentityError
@@ -26,30 +19,6 @@ namespace Web_application_of_students_squad_SFEDU.Models
                     Description = "Для регистрации можно использовать только почту sfedu.ru"
                 });
             }
-
-            //if (!user.Email.Contains("@"))
-            //{
-            // errors.Add(new IdentityError
-            // {
-            // Description = "Введен неверный адрес электронной почты"
-            // });
-            //}
-
-            if (user.UserName.Contains("admin"))
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Ник пользователя не должен содержать слово 'admin'"
-                });
-            }
-
-            //if (user.Email == "")
-            //{
-            // errors.Add(new IdentityError
-            // {
-            // Description = "Введен пустой Email"
-            // });
-            //}
 
             return Task.FromResult(errors.Count == 0 ?
             IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
