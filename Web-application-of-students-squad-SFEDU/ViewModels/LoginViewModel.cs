@@ -8,11 +8,11 @@ namespace Web_application_of_students_squad_SFEDU.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Поле <Email> не должно быть пустым!")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле <Пароль> не должно быть пустым!")]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
         public string Password { get; set; }
