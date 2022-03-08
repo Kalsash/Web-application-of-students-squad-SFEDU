@@ -51,13 +51,6 @@ namespace Web_application_of_students_squad_SFEDU.Models
             // });
             //}
 
-            if (!(user.Year > 1890))
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Год рождения должен быть больше 1890"
-                });
-            }
             return Task.FromResult(errors.Count == 0 ?
             IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
             //return Task.FromResult(IdentityResult.Success);
