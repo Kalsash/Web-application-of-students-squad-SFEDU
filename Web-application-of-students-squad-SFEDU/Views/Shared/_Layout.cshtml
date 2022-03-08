@@ -14,7 +14,7 @@
     <script src="~/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-   @await Html.PartialAsync("HeaderPartial")
+    @await Html.PartialAsync("HeaderPartial")
 
     <div class="container" style="max-width: 100%; padding: 0">
         <main role="main">
@@ -22,8 +22,9 @@
         </main>
     </div>
 
-   @await Html.PartialAsync("FooterPartial")
+    @await Html.PartialAsync("FooterPartial")
 
     @RenderSection("Scripts", required: false)
+    <script src="~/js/script.js"></script>
 </body>
 </html>

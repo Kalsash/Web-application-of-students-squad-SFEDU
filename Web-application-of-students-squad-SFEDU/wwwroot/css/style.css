@@ -88,79 +88,30 @@ header.header_section {
   margin: 0 auto;
 }
 
-.custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 25px 15px 15px;
+body._pc .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 26px 15px 15px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+body._touch .custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 10px 15px 15px;
   color: #ffffff;
   text-align: center;
   position: relative;
   text-transform: uppercase;
 }
 
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+body._pc .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
   background-color: #ffffff;
   color : #D73323;
 }
 
-.nav-item {
-    display: inline-block;
-}
-
-.nav-item .submenu {
-    transform: perspective(600px) rotateX(-90deg);
-    transform-origin: 0% 0%;
-    transition: .6s ease-in-out;
-    position: absolute;   
-    top: 100%;
-    visibility: hidden;
-    opacity: 0;
-    list-style: none;
-    border-radius: 0 0 10px 10px;
-    padding-left: 0;
-    border-top: 4px solid #cf2f1d;
-    border-bottom: 4px solid white;
-    border-right: 4px solid white;
-    border-left: 4px solid white;
-}
-
-.nav-item:hover > ul {
-    display: inherit;
-    visibility: visible;
-    opacity: 1;
-    background-color: #D73323;
-}
-
-.nav-item .submenu li:hover {
-    background-color: white;
-}
-
-.nav-item .submenu li {
-    min-width: 140px;
-    float: none;
-    display: list-item;
-    position: relative;
-    padding: 5px 10px;
-}
-
-.nav-item ul li a {
-    color: white;
-    font-size: 17px;
-}
-
-.nav-item ul li:hover a {
+body._touch .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+    background-color: #ffffff;
     color: #D73323;
-}
-
-.nav-item:hover ul {
-    visibility: visible;
-    opacity: 1;
-    transform: perspective(600px) rotateX(0deg);
-}
-
-.down:after {
-    content: "▼";
-    margin-left: 4px;
-    font-family: FontAwesome;
-    font-size: 15px;
 }
 
 .custom_nav-container .form-inline {
@@ -1112,7 +1063,102 @@ img.img-fluid.nwsborder:hover {
 
 .client_section .img-box img{
     max-width: 100px;
-    /*max-height: 169px;*/
+}
+
+body._pc .nav-item {
+    display: inline-block;
+}
+
+body._pc .nav-item .submenu {
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: 0s ease-in-out;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    border-radius: 0 0 10px 10px;
+    padding-left: 0;
+    border-top: 4px solid #cf2f1d;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+}
+
+body._pc .nav-item:hover > ul {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+    background-color: #D73323;
+}
+
+.nav-item .submenu li:hover {
+    background-color: white;
+}
+
+body._pc .nav-item .submenu li {
+    min-width: 140px;
+    float: none;
+    display: list-item;
+    position: relative;
+    padding: 5px 10px;
+}
+
+body._pc .nav-item ul li a {
+    color: white;
+    font-size: 17px;
+}
+
+body._pc .nav-item ul li:hover a {
+    color: #D73323;
+}
+
+body._pc .nav-item:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+body._pc .down:after {
+    content: "▼";
+    margin-left: 4px;
+    font-family: FontAwesome;
+    font-size: 15px;
+}
+
+body._touch .down:after {
+    content: "▼";
+    margin-left: 4px;
+    font-family: FontAwesome;
+    font-size: 15px;
+}
+
+body._touch .nav-item .submenu {
+    transform-origin: 0% 0%;
+    top: 100%;
+    opacity: 1;
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+body._pc .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+    background-color: #ffffff;
+    color: #D73323;
+}
+
+body._touch .nav-item .submenu li {
+    padding: 2px 4px 4px 4px;
+}
+
+body._touch .nav-item .submenu li a{
+    color: white;
+    text-decoration: underline;
+}
+
+body._touch .nav-item .submenu li a:hover {
+    color: red;
 }
 
 @font-face {
