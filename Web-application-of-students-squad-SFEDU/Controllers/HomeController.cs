@@ -19,14 +19,18 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ArticlesRepository articlesRepository;
 
+        private readonly ContactsRepository contactRepository;
+
+
         // Constructor
         public HomeController(ILogger<HomeController> logger, UserManager<User> userManager, 
-            SignInManager<User> signInManager, ArticlesRepository articlesRepository)
+            SignInManager<User> signInManager, ArticlesRepository articlesRepository, ContactsRepository contactRepository)
         {
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
             this.articlesRepository = articlesRepository;
+            this.contactRepository = contactRepository; 
         }
 
         //// Главная
@@ -61,6 +65,24 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             return View();
         }
+
+        public IActionResult Contacts()
+        {
+            return View();
+            //Contact model = id == default ? new Contact() : ContactsRepository.GetArticleById(id);
+            //return View(model);
+        }
+        [HttpPost]
+        public IActionResult Contacts(Contact model)
+        {
+            if (model.Email != null)
+            {
+                contactRepository.SaveArticle(model);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
 
         //Профиль
         public IActionResult Profile() => View(_userManager.Users.ToList());

@@ -27,7 +27,8 @@ namespace Web_application_of_students_squad_SFEDU
             services.AddTransient<IUserValidator<User>, CustomUserValidator>();
 
             services.AddTransient<ArticlesRepository>();
-  
+            services.AddTransient<ContactsRepository>();
+
             services.AddTransient<IPasswordValidator<User>,
             CustomPasswordValidator>(serv => new CustomPasswordValidator(6));
 

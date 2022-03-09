@@ -18,7 +18,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
         [Display(Name = "Номер телефона")]
         public string PhoneNumber { get; set; }
 
-        [Display(Name = "Тектстовое сообщение")]
+        [Display(Name = "Текстовое сообщение")]
         public string TextMessage { get; set; }
     }
 }
