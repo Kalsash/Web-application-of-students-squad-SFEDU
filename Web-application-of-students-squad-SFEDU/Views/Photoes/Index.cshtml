@@ -1,0 +1,28 @@
+﻿@model IQueryable<Galery>
+<h2 style="margin-top: 64px; text-decoration: underline" class="text-center">Панель Галереи</h2>
+
+
+
+<div class="text-center">
+<div style="margin-bottom: 20px">
+    <a asp-controller="Photoes" asp-action="PhotoEdit" style="font-weight: bold; border: solid 3px blue; border-radius: 10px; padding: 3px 6px;">Добавить фото</a>
+</div>
+    @foreach (Galery entity in Model)
+    {
+<div>
+    <h4>@entity.Title</h4>
+
+    <div style="margin-bottom: 5px">
+        |
+        <a asp-controller="Photoes" asp-action="PhotoEdit" asp-route-id="@entity.Id">Редактировать</a>
+        |
+    </div>
+    <form method="post" asp-controller="Photoes" asp-action="PhotoDelete" style="margin-bottom: 20px">
+        <input type="hidden" name="Id" value="@entity.Id" />
+        <input type="submit" value="удалить" />
+    </form>
+
+</div>
+<div style="background-color: black; height: 3px; width: 50%; margin-left: 25%; margin-bottom: 20px"></div>
+    }
+</div>
