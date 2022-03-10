@@ -1,0 +1,13 @@
+﻿@model IQueryable<Galery> 
+<h3>Галерея</h3>
+<p> gsg</p>
+<h1>Галерея</h1>
+
+
+ @foreach (Galery entity in Model)
+{
+          @entity.Title
+           <a asp-area="" asp-controller="Galery" asp-action="Index" asp-route-id="@entity.Id">
+          <img src="~/images/@entity.TitleImagePath" alt="" class="left img-fluid nwsborder"/>
+          </a>
+}

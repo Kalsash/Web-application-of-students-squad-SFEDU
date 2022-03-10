@@ -18,7 +18,6 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         private readonly SignInManager<User> _signInManager;
         private readonly ILogger<HomeController> _logger;
         private readonly ArticlesRepository articlesRepository;
-
         private readonly ContactsRepository contactRepository;
 
 
@@ -30,7 +29,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
             this.articlesRepository = articlesRepository;
-            this.contactRepository = contactRepository; 
+            this.contactRepository = contactRepository;
         }
 
         //// Главная
@@ -69,8 +68,6 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         public IActionResult Contacts()
         {
             return View();
-            //Contact model = id == default ? new Contact() : ContactsRepository.GetArticleById(id);
-            //return View(model);
         }
         [HttpPost]
         public IActionResult Contacts(Contact model)
