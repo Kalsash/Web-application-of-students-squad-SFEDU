@@ -26,21 +26,21 @@
                              <div asp-validation-summary="ModelOnly"></div>
                             <input type="hidden" asp-for="Id"/>
                             <div>
-                                <input type="email" placeholder="Электронная почта" asp-for="Email"/>
+                                <input type="email" maxlength="40"placeholder="Электронная почта" asp-for="Email"/>
                                 <span asp-validation-for="Email"></span>
                             </div>
 
                             <div>
-                                  <input type="text" placeholder="Полное имя " asp-for="FullName" />
+                                  <input type="text" maxlength="40" placeholder="Полное имя " asp-for="FullName" />
                                   <span asp-validation-for="FullName"></span>
                             </div>
                             <div>
-                                <input type="text" placeholder="Номер телефона" asp-for="PhoneNumber"/>
+                                <input type="text" maxlength="12" placeholder="Номер телефона" asp-for="PhoneNumber"/>
                                  <span asp-validation-for="PhoneNumber"></span>
                             </div>
  
                             <div>
-                                <input type="text" placeholder="Ваше сообщение" class="input_message"asp-for="TextMessage" />
+                                <input type="textarea" maxlength="256" placeholder="Ваше сообщение(ограничение 256 слов)" class="input_message"asp-for="TextMessage" />
                                  <span asp-validation-for="TextMessage"></span>
                             </div>
                             <div class="d-flex justify-content-center">
