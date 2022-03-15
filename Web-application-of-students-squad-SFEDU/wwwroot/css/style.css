@@ -81,8 +81,8 @@ header.header_section {
 
 .header_section .container-fluid {
   padding-left: 25px;
-    border-bottom: 5px solid #ffffff;
-    max-height: 68px;
+  border-bottom: 5px solid #ffffff;
+  
 }
 
 .header_section .nav_container {
