@@ -116,19 +116,24 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                 User user = await _userManager.FindByIdAsync(model.Id);
                 if (user != null)
                 {
-                    IdentityResult result =
-                        await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index");
-                    }
-                    else
-                    {
-                        foreach (var error in result.Errors)
-                        {
-                            ModelState.AddModelError(string.Empty, error.Description);
-                        }
-                    }
+                    var _passwordHasher =
+                   HttpContext.RequestServices.GetService(typeof(IPasswordHasher<User>)) as IPasswordHasher<User>;
+                    user.PasswordHash = _passwordHasher.HashPassword(user, model.NewPassword);
+                    await _userManager.UpdateAsync(user);
+                    return RedirectToAction("Index");
+                    //IdentityResult result =
+                    //    await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+                    //if (result.Succeeded)
+                    //{
+                    //    return RedirectToAction("Index");
+                    //}
+                    //else
+                    //{
+                    //    foreach (var error in result.Errors)
+                    //    {
+                    //        ModelState.AddModelError(string.Empty, error.Description);
+                    //    }
+                    //}
                 }
                 else
                 {
