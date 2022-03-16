@@ -11,8 +11,9 @@ namespace Web_application_of_students_squad_SFEDU.ViewModels
     {
         public string Id { get; set; }
         public string Email { get; set; }
-        [Required(ErrorMessage = "Поле <Пароль> не должно быть пустым!")]
+        [Required(ErrorMessage = "Поле <Новый пароль> не должно быть пустым!")]
         public string NewPassword { get; set; }
+        [Required(ErrorMessage = "Поле <Старый пароль> не должно быть пустым!")]
         public string OldPassword { get; set; }
     }
 }
