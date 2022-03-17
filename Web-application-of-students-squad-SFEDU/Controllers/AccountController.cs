@@ -35,8 +35,13 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             if (ModelState.IsValid)
             {
                 User user = new User { Email = model.Email, UserName = model.Email, Year = model.Year };
+
+                var user2 = await _userManager.FindByNameAsync(model.Email);
+                if (user2 != null)
+                    return Content("Пользователь с данным Email уже зарегестрирован!");
                 // добавляем пользователя
                 var result = await _userManager.CreateAsync(user, model.Password);
+                
                 if (result.Succeeded)
                 {
                     // установка куки
