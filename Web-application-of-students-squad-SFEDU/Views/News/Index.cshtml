@@ -10,13 +10,7 @@
     @foreach (Article entity in Model)
     {
 <div>
-    @*<a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">*@
     <h4>@entity.Title</h4>
-    @*</a>
-        <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
-            <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
-        </a>
-    *@
     <div style="margin-bottom: 5px">
         |
         <a asp-controller="News" asp-action="NewsEdit" asp-route-id="@entity.Id">Редактировать</a>

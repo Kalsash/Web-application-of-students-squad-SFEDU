@@ -1,11 +1,20 @@
 ﻿@model IQueryable<Galery> 
-<h1 style="margin-top: 64px; text-align: center">Галерея</h1>
-
-
- @foreach (Galery entity in Model)
-{
-          //@entity.Title
-           //<a asp-area="" asp-controller="Galery" asp-action="Index" asp-route-id="@entity.Id">
-          <img src="~/images/gallery/@entity.TitleImagePath" alt="" class="left img-fluid nwsborder"/>
-          //</a>
-}
+<div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
+<p style="margin-top: 70px; text-align: center; color: white; font-size: 60px">Галерея</p>
+<section class="section_gallery">
+    <div class="row">
+        @foreach (Galery entity in Model)
+        {
+            <section class="col-md-6 col-lg-4 one_photo">
+                <ul class="hover-effect-scale">
+                    <li>
+                         <img src="~/images/gallery/@entity.TitleImagePath" alt="" class="left img-fluid photoborder" />
+                        <div>
+                            <h3>@entity.Title</h3>  
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        }
+    </div>
+</section>

@@ -1034,7 +1034,16 @@ transform: scale(1.3);
     justify-content: flex-end;
     margin-bottom: 25px;
 }
-
+.one_photo {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    justify-content: space-around;
+}
+/*.one_photo img{
+    max-height:40vh;
+}*/
 img {
     vertical-align: middle;
 }
@@ -1045,7 +1054,13 @@ img {
     border-radius: 10px;
     padding: 2%;
 }
+.section_gallery{
 
+}
+.section_gallery .row {
+    margin: 0 0 0 0;
+    justify-content: space-around;
+}
 .four_news {
     display: -webkit-flex;
     display: flex;
@@ -1059,6 +1074,14 @@ img.img-fluid.nwsborder {
 }
     
 img.img-fluid.nwsborder:hover {
+    border: solid 5px white;
+}
+img.img-fluid.photoborder {
+    border-radius: 20px;
+    border: solid 5px transparent;
+}
+
+img.img-fluid.photoborder:hover {
     border: solid 5px white;
 }
 
@@ -1161,7 +1184,62 @@ body._touch .nav-item .submenu li a{
 body._touch .nav-item .submenu li a:hover {
     color: red;
 }
-
+/* Настройки маркированного списка */
+.hover-effect-scale {
+    list-style:none;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+.hover-effect-scale li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-transition: 0.4s linear; /* Safari and Chrome */
+    -moz-transition: 0.4s linear; /* Firefox 4 */
+    -o-transition: 0.4s linear; /* Opera */
+}
+.hover-effect-scale li:hover{
+    border: solid 5px white;
+}
+/* Заголовок, текст и ссылка */
+.hover-effect-scale li h3{
+    color: #fff;
+    margin: 5px;
+}
+/* Выезжающий блок с текстом */ 
+.hover-effect-scale li > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hover-effect-scale li:hover > div {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.hover-effect-scale li div {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.35); /* Фон блока при наведении */
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+}
+.hover-effect-scale li img {
+    transition: all 0.2s linear;
+}
+.hover-effect-scale li:hover img {
+    transform: scale(1.3);
+}
+.hover-effect-scale li:hover div {
+    opacity: 1;
+}
 @font-face {
     font-family: "AmaticSC-Bold";
     src: url("../fonts/AmaticSC-Bold.ttf") format("truetype");
