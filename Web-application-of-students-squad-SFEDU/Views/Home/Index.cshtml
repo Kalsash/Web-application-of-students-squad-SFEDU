@@ -116,7 +116,7 @@
                 k++;
                 <section class="col-md-6 col-lg-4 one_news">
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
-                    <img src="~/images/@entity.TitleImagePath" alt="" class="left img-fluid nwsborder"/>
+                    <img src="~/images/news/@entity.TitleImagePath" alt="" class="left img-fluid nwsborder"/>
                 </a>
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id" style="text-decoration: underline; color: white; font-weight: 500; position: absolute; left: 35px; bottom:15px; font-size: 25px">
                     @entity.Title
