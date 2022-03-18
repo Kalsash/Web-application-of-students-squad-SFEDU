@@ -44,7 +44,8 @@ namespace Web_application_of_students_squad_SFEDU.Models
             {
                 Id = new Guid("716C2E99-6F6C-4472-81A5-43C56E11637E"),
                 Title = "Тестовая фотка",
-                TitleImagePath = "emblem.jpg"
+                TitleImagePath = "emblem.jpg",
+                Data = DateTime.Now
             });
         }
     }

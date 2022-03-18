@@ -16,7 +16,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
         //выбрать все записи из таблицы Articles
         public IQueryable<Galery> GetArticles()
         {
-            return context.Photoes.OrderBy(x => x.Title);
+            return context.Photoes.OrderBy(x => x.Data);
         }
 
         //найти определенную запись по id
