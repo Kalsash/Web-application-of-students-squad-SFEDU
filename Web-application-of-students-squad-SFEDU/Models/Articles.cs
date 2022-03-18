@@ -17,5 +17,8 @@ namespace Web_application_of_students_squad_SFEDU.Models
 
         [Display(Name = "Титульная картинка")]
         public virtual string TitleImagePath { get; set; }
+
+        [Display(Name = "Дата и время")]
+        public DateTime Data { get; set; }
     }
 }

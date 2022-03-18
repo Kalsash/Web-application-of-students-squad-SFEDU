@@ -50,6 +50,7 @@ namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
                         titleImageFile.CopyTo(stream);
                     }
                 }
+                model.Data = DateTime.Now;
                 articlesRepository.SaveArticle(model);
                 return RedirectToAction("Index");
             }
