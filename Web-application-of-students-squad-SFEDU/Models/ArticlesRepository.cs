@@ -16,7 +16,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
         //выбрать все записи из таблицы Articles
         public IQueryable<Article> GetArticles()
         {
-            return context.Articles.OrderBy(x => x.Data);
+            return context.Articles.OrderByDescending(x => x.Data);
         }
 
         //найти определенную запись по id
