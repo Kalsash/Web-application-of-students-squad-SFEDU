@@ -7,7 +7,7 @@
     <h1 style="margin-top: 60px">Редактировать статью</h1>
     <div>
         <form asp-controller="News" asp-action="NewsEdit" method="post" enctype="multipart/form-data">
-            <input type="hidden" asp-for="Id"/>
+            <input type="hidden" asp-for="Id" />
 
             <div asp-validation-summary="All"></div>
 
@@ -21,14 +21,18 @@
                 <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
             </div>
-             <div class="div-box">
+            <div class="div-box">
                 <label asp-for="TitleImagePath"></label>
                 <input type="file" name="titleImageFile" id="titleImageFile" />
                 <div>
                     <img class="img-block" src="~/images/news/@Model.TitleImagePath" />
                 </div>
             </div>
-
+            <div>
+                <label asp-for="NewsDate"></label>
+                <input type="date" id="NewsDate" name="NewsDate" min="2021-01-01" max="2021-06-01" />
+                <span asp-validation-for="NewsDate"></span>
+            </div>
             <input type="submit" value="Сохранить" />
         </form>
     </div>
