@@ -28,6 +28,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
                 Title = "Тестовая новость",
                 Text = "Добавьте какую-нибудь новость в панели администратора!",
                 TitleImagePath = "emblem.jpg",
+                NewsDate = DateTime.Now.Date.ToString(),
                 Data = DateTime.Now
         });
 
