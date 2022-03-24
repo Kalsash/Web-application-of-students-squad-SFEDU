@@ -6,7 +6,7 @@
 <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
 <!-- slider section -->
 <section class=" slider_section position-relative" style="margin-top : 15%">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-    </div>
+     </div>
     <a class="join_btn" href="https://vk.com/rsosfu?w=app5708398_-93538733">
         Вступить в отряд
     </a>
@@ -120,6 +120,7 @@
                 </a>
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id" style="text-decoration: underline; color: white; font-weight: 500; position: absolute; left: 35px; bottom:15px; font-size: 25px">
                     @entity.Title
+                    @entity.NewsDate
                 </a>
                 @if(k == 6)
                     break;
@@ -129,15 +130,15 @@
         @if (k == 0)
         {
             <div class="course_container">
-            <div class="course_content">
+             <div class="course_content">
                 <div class="box">
                     <img src="images/c-0.jpg" alt="" />
-                    <a href="" class="">
+                     <a href="" class="">
                         <img src="images/link.png" alt="" />
-                    </a>
+                     </a>
                     <h5>
-                        Название <br />
-                        описание
+                        Тестовые<br />
+                        новости
                     </h5>
                 </div>
                 <div class="box">
@@ -146,8 +147,8 @@
                         <img src="images/link.png" alt="" />
                     </a>
                     <h5>
-                        Название <br />
-                        описание
+                        Тестовые<br />
+                        новости
                     </h5>
                 </div>
                 <div class="box">
@@ -156,8 +157,8 @@
                         <img src="images/link.png" alt="" />
                     </a>
                     <h5>
-                        Название <br />
-                        описание
+                       Тестовые<br />
+                        новости
                     </h5>
                 </div>
             </div>
@@ -168,8 +169,8 @@
                         <img src="images/link.png" alt="" />
                     </a>
                     <h5>
-                        Название <br />
-                        описание
+                        Тестовые<br />
+                        новости
                     </h5>
                 </div>
                 <div class="box">
@@ -178,8 +179,8 @@
                         <img src="images/link.png" alt="" />
                     </a>
                     <h5>
-                        Название <br />
-                        описание
+                        Тестовые<br />
+                        новости
                     </h5>
                 </div>
                 <div class="box">
@@ -188,8 +189,8 @@
                         <img src="images/link.png" alt="" />
                     </a>
                     <h5>
-                        Название<br />
-                        описание
+                        Тестовые<br />
+                        новости
                     </h5>
                 </div>
             </div>
@@ -204,8 +205,8 @@
     </div>
 </section>
 
-<!-- end course section -->
-<!-- client section -->
+ <!-- end course section -->
+ <!-- client section -->
 <div style="background-color: #ffffff; z-index: 500; border-radius: 450px 450px 0 0; max-width: 90%; margin-left: 5%; border-top: solid #cf2f1d 10px;">
     <section class="client_section layout_padding-bottom">
         <div class="container">
