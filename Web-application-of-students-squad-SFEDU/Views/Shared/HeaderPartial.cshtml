@@ -25,11 +25,15 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Directions">Направления</a>
+                        <a class="nav-link down">Структура</a>
+                        <ul class="submenu">
+                            <li> <a asp-area="" asp-controller="Home" asp-action="Directions">Направления</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="About">История и достижения</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
+                   @* <li class="nav-item">
                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Structure">Структура</a>
-                    </li>
+                    </li>*@
                     <li class="nav-item">
                         <a class="nav-link down">О нас</a>
                         <ul class="submenu">
