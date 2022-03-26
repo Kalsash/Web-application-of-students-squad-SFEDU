@@ -676,7 +676,7 @@ transform: scale(1.3);
   padding-top: 20px;
 }
 
-.client_section .heading_container p {
+.client_section .somewords p {
   margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -1079,13 +1079,6 @@ body .nav-item {
 
 .nav-item .submenu li:hover {
     background-color: white;
-}
-
-body .down:after {
-    content: "▼";
-    margin-left: 4px;
-    font-family: FontAwesome;
-    font-size: 15px;
 }
 
 body .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {

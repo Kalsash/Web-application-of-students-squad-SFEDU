@@ -9,21 +9,22 @@
                                 Навигация
                             </h5>
                             <ul class="navbar-nav ">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Articles" asp-action="Index">Новости</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Directions">Направления</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Directions">Структура</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="About">О нас</a>
-                                </li>
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Articles" asp-action="Index">Новости</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Galery" asp-action="Index">Галерея</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Directions">Направления</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">История и достижения</a></li>
+                                @* <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Structure">Структура</a></li>*@
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Stud">Что такое студотряды?</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contacts">Обратная связь</a></li>
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="index">Администратор</a>
+                                    </li>
+                                }
+                                else
+                                {
                                 @if (User.Identity.IsAuthenticated)
                                 {
                                     <li class="nav-item">
@@ -33,13 +34,11 @@
                                 else
                                 {
                                     <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
                                     </li>
                                 }
-                            </ul>
+                                }
+                                </ul>
                         </div>
                     </div>
                     <div class="col-md-3">
