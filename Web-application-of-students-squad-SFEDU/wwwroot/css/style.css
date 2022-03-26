@@ -1176,4 +1176,10 @@ body .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-co
  font-style: normal; 
 font-weight: normal; 
 }
+@font-face {
+    font-family: "History";
+    src: url("../fonts/beer money.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
