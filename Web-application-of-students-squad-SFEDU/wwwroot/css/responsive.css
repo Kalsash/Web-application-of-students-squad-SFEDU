@@ -1,4 +1,52 @@
 @media (max-width: 2048px) {
+    .lastli {
+        border-radius: 0 0 4px 4px;
+    }
+    body .custom_nav-container .navbar-nav .nav-item .nav-link {
+        padding: 26px 15px 15px;
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+        text-transform: uppercase;
+    }
+    body .nav-item .submenu li {
+        min-width: 140px;
+        float: none;
+        display: list-item;
+        position: relative;
+        padding: 5px 10px;
+    }
+
+    body .nav-item ul li a {
+        color: white;
+        font-size: 17px;
+    }
+    body .nav-item .submenu {
+        position: absolute;
+        top: 100%;
+        visibility: hidden;
+        opacity: 0;
+        list-style: none;
+        border-radius: 0 0 10px 10px;
+        padding-left: 0;
+        border-top: 4px solid #cf2f1d;
+        border-bottom: 4px solid white;
+        border-right: 4px solid white;
+        border-left: 4px solid white;
+    }
+    body .nav-item:hover > ul {
+        display: inherit;
+        visibility: visible;
+        opacity: 1;
+        background-color: #cf2f1d;
+    }
+    body .nav-item ul li:hover a {
+        color: #D73323;
+    }
+    body .nav-item:hover ul {
+        visibility: visible;
+        opacity: 1;
+    }
     .row1 .history_container {
         background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
@@ -81,6 +129,36 @@
     }
 }
 @media (max-width: 992px) {
+    .lastli {
+        border-radius: 0;
+    }
+    body .custom_nav-container .navbar-nav .nav-item .nav-link {
+        padding: 15px 15px 15px;
+    }
+    body .nav-item .submenu li {
+        min-width: 140px;
+        float: none;
+        display: list-item;
+        position: relative;
+        padding: 4px 0;
+    }
+
+    body .nav-item ul li a {
+        color: white;
+        font-size: 17px;
+        padding: 8px 55px;
+    }
+    body .nav-item .submenu {
+        text-align: center;
+        position: relative;
+        opacity: initial;
+        top: 100%;
+        visibility: visible;
+        list-style: none;
+        border-radius: 0;
+        padding-left: 0;
+        border: none;
+    }
     .row1 .history_container {
         background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
@@ -201,6 +279,15 @@
 }
 
 @media (max-width: 768px) {
+    body .nav-item .submenu {
+        position: relative;
+        top: 100%;
+        visibility: visible;
+        list-style: none;
+        border-radius: 0;
+        padding-left: 0;
+        border: none;
+    }
     .row1 .history_container {
         background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
@@ -321,6 +408,15 @@
 }
 
 @media (max-width: 576px) {
+    body .nav-item .submenu {
+        position: relative;
+        top: 100%;
+        visibility: visible;
+        list-style: none;
+        border-radius: 0;
+        padding-left: 0;
+        border: none;
+    }
     .row1 .history_container {
         background-image: url(../images/svitok.webp);
         background-size: 100% 100%;
@@ -388,6 +484,15 @@
 }
 
 @media (max-width: 480px) {
+    body .nav-item .submenu {
+        position: relative;
+        top: 100%;
+        visibility: visible;
+        list-style: none;
+        border-radius: 0;
+        padding-left: 0;
+        border: none;
+    }
     .row1 .history_container {
         background-image: none;
         background-size: 100% 100%;
@@ -447,6 +552,15 @@
 }
 
 @media (max-width: 400px) {
+    body .nav-item .submenu {
+        position: relative;
+        top: 100%;
+        visibility: visible;
+        list-style: none;
+        border-radius: 0;
+        padding-left: 0;
+        border: none;
+    }
     .row1 .history_container {
         background-image: none;
         background-size: 100% 100%;
@@ -491,6 +605,15 @@
 }
 
 @media (max-width: 360px) {
+    body .nav-item .submenu {
+        position: relative;
+        top: 100%;
+        visibility: visible;
+        list-style: none;
+        border-radius: 0;
+        padding-left: 0;
+        border: none;
+    }
     .row1 .history_container {
         background-image: none;
         background-size: 100% 100%;
