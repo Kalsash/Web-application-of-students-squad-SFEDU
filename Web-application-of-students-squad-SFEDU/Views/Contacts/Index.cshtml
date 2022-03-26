@@ -1,20 +1,18 @@
 ﻿@model IQueryable<Contact>
-
-<h2>Список пользовательских сообщений</h2>
-<p> d</p>
-<h1>Список пользовательских сообщений</h1>
- @foreach (Contact entity in Model)
- {
-     <p>Email</p>
-     <h4>@entity.Email</h4>
-     <p>FullName</p>
-     <h4>@entity.FullName</h4>
-     <p>PhoneNumber</p>
-     <h4>@entity.PhoneNumber</h4>
-     <p>TextMessage</p>
-     <h4>@entity.TextMessage</h4>
-      <form method="post" asp-controller="Contacts" asp-action="ContactDelete" style="margin-bottom: 20px">
-        <input type="hidden" name="Id" value="@entity.Id" />
-        <input type="submit" value="удалить" />
-    </form>
- }
+    <div style="background-color: lightgray; margin-top: 70px; padding: 20px 0;">
+        <div style="text-align: center; background-color: white; margin-left: 10%; margin-right: 10%;">
+            <h1>Список пользовательских сообщений: </h1>
+            @foreach (Contact entity in Model)
+            {
+                <h4 style="margin-top: 40px"><span style="text-decoration: underline">Почта:</span> @entity.Email</h4>
+                <h4><span style="text-decoration: underline">Полное имя:</span> @entity.FullName</h4>
+                <h4><span style="text-decoration: underline">Номер телефонa:</span> @entity.PhoneNumber</h4>
+                <h4><span style="text-decoration: underline">Сообщение:</span></h4>
+                <h5 style="border: 3px dashed gray; border-radius: 10px; margin: 0 5%">@entity.TextMessage</h5>
+                    <form method="post" asp-controller="Contacts" asp-action="ContactDelete">
+                        <input type="hidden" name="Id" value="@entity.Id" />
+                        <input type="submit" value="удалить" />
+                    </form>
+            }
+        </div>
+    </div>
