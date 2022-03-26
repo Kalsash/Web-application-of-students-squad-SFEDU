@@ -4,36 +4,42 @@
 <script src="~/js/ckeditor/ckeditor.js"></script>
 
 <div>
-    <h1 style="margin-top: 60px">Редактировать статью</h1>
+    <h1 style="margin-top: 70px; text-align: center">Редактировать статью</h1>
     <div>
         <form asp-controller="News" asp-action="NewsEdit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" />
 
             <div asp-validation-summary="All"></div>
 
-            <div>
+            <div class="div-box">
+                <div style="margin-bottom: 10px">
+                    <img class="img-block" src="~/images/news/@Model.TitleImagePath" style="width: 50%; margin-left: 25%" />
+                </div>
+                <div style="text-align: center; margin-bottom: 20px">
+                    <label asp-for="TitleImagePath"></label>
+                    <input type="file" name="titleImageFile" id="titleImageFile" />
+                </div>
+            </div>
+
+            <div style="text-align: center">
                 <label asp-for="Title"></label>
                 <input asp-for="Title" />
                 <span asp-validation-for="Title"></span>
             </div>
-            <div>
+            <div style="text-align: center">
                 <label asp-for="Text"></label>
                 <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
             </div>
-            <div class="div-box">
-                <label asp-for="TitleImagePath"></label>
-                <input type="file" name="titleImageFile" id="titleImageFile" />
-                <div>
-                    <img class="img-block" src="~/images/news/@Model.TitleImagePath" />
-                </div>
-            </div>
-            <div>
-                <label asp-for="NewsDate"></label>
+
+            <div style="text-align: center;">
+                <label asp-for="NewsDate" style="align-items: center;"></label>
                 <input type="date" id="NewsDate" name="NewsDate" min="2021-01-01" max="2022-03-22" />
                 <span asp-validation-for="NewsDate"></span>
             </div>
-            <input type="submit" value="Сохранить" />
+            <div style="text-align: center; margin-bottom: 10px">
+                <input type="submit" value="Сохранить" />
+            </div>
         </form>
     </div>
 </div>

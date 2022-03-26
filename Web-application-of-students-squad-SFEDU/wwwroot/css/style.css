@@ -81,7 +81,7 @@ header.header_section {
 
 .header_section .container-fluid {
   padding-left: 25px;
-  border-bottom: 5px solid #ffffff;
+  border-bottom: 8px solid #ffffff;
   
 }
 
@@ -1114,7 +1114,7 @@ body._pc .nav-item:hover > ul {
     display: inherit;
     visibility: visible;
     opacity: 1;
-    background-color: #D73323;
+    background-color: #cf2f1d;
 }
 
 .nav-item .submenu li:hover {

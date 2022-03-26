@@ -1,7 +1,7 @@
 ﻿@model Galery
 
 <div>
-    <h1 style="margin-top: 60px">Редактировать фото</h1>
+    <h1 style="margin-top: 70px; text-align: center">Редактировать фото</h1>
     <div>
         <form asp-controller="Photoes" asp-action="PhotoEdit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id"/>
@@ -9,20 +9,21 @@
 
             <div asp-validation-summary="All"></div>
 
-            <div>
+            <div  style="text-align: center">
                 <label asp-for="Title"></label>
                 <input asp-for="Title" />
                 <span asp-validation-for="Title"></span>
             </div>
              <div class="div-box">
-                <label asp-for="TitleImagePath"></label>
-                <input type="file" name="titleImageFile" id="titleImageFile" />
-                <div>
-                    <img class="img-block" src="~/images/gallery/@Model.TitleImagePath" />
-                </div>
+                 <div  style="text-align: center">
+                     <label asp-for="TitleImagePath"></label>
+                     <input type="file" name="titleImageFile" id="titleImageFile" />
+                 </div>
+                <img class="img-block" src="~/images/gallery/@Model.TitleImagePath"  style="width: 50%; margin-left: 25%"/>
             </div>
-
-            <input type="submit" value="Сохранить" />
+             <div style="text-align: center">
+                 <input type="submit" value="Сохранить" style="margin: 10px 0;"/>
+             </div>
         </form>
     </div>
 </div>
