@@ -27,8 +27,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
                 Id = new Guid("716C2E99-6F6C-4472-81A5-43C56E11637C"),
                 Title = "Тестовая новость",
                 Text = "Добавьте какую-нибудь новость в панели администратора!",
-                TitleImagePath = "emblem.jpg",
-                NewsDate = DateTime.Now.Date.ToString(),
+                TitleImagePath = "emblem.jpg", 
                 Data = DateTime.Now
         });
 
