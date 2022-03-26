@@ -10,14 +10,13 @@
         @foreach (Article entity in Model)
         {
         <section class="col-md-6 col-lg-4 one_news">
-            @*@Html.Raw(@entity.Text)*@
             <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
                 <img src="~/images/news/@entity.TitleImagePath" alt="" class="left img-fluid" />
             </a>
             <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id" style="color: darkblue; font-size: 20px; font-weight:bold">
                 @entity.Title
             </a>
-            @entity.NewsDate
+            @entity.Data.ToShortDateString()
         </section>
         }
     </div>
