@@ -1117,6 +1117,10 @@ body._pc .nav-item:hover > ul {
     background-color: #cf2f1d;
 }
 
+.archive .delete{
+    visibility: hidden;
+}
+
 .nav-item .submenu li:hover {
     background-color: white;
 }
