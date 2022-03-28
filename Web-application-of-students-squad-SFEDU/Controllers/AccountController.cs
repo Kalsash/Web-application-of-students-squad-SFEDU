@@ -53,9 +53,9 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                     await emailService.SendEmailAsync(model.Email,
                         $"Подтвердите регистрацию, перейдя по ссылке: <a href='{callbackUrl}'>link</a>");
 
-                    return Content("Для завершения регистрации проверьте электронную почту и перейдите по ссылке, указанной в письме");
+                    //return Content("Для завершения регистрации проверьте электронную почту и перейдите по ссылке, указанной в письме");
 
-                    //return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Profile", "Home");
 
                 }
                 else
