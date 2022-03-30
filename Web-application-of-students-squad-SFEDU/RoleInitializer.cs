@@ -11,7 +11,7 @@ namespace Web_application_of_students_squad_SFEDU
     {
         public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
-            string adminEmail = "akalinin@sfedu.ru";
+            string adminEmail = "Owner@sfedu.ru";
             string password = "IamTheBest1337Admin!";
             int year = 2000;
             if (await roleManager.FindByNameAsync("admin") == null)
