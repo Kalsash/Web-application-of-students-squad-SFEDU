@@ -2,6 +2,12 @@ body {
   font-family: "Poppins", sans-serif;
   color: #000000;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+body, html{
+    height: 100%
 }
 
 .blockquote {
