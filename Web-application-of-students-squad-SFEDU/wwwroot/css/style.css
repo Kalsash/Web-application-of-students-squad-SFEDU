@@ -10,6 +10,11 @@ body, html{
     height: 100%
 }
 
+.field-validation-error {
+    color: white;
+    text-shadow: 1px 0 1px red, 0 1px 1px red, -1px 0 1px red, 0 -1px 1px red;
+}
+
 .blockquote {
     margin-top: 20px;
     margin-bottom: 40px;
@@ -786,11 +791,7 @@ transform: scale(1.3);
 }
 
 .connection {
-    flex: 0 0 70%;
-}
-
-.contact_section .detail-box {
-  width: 250px;
+    flex: 0 0 100%;
 }
 
 .contact_section .detail-box p {
