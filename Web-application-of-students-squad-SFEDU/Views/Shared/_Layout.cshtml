@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Сайт ШСО ЮФУ</title>
 
-    <link href="~/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/css/responsive.css" rel="stylesheet" />
-    <link href="~/css/style.css" rel="stylesheet" />
+    @await Html.PartialAsync("CssPartial")
     <link href="~/fonts/AmaticSC-Bold.ttf">
     <link href="~/fonts/Lora-VariableFont_wght.ttf">
-    <script defer type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
-    <script defer type="text/javascript" src="~/js/bootstrap.js"></script>
-    <script defer type="text/javascript" src="~/js/script.js"></script>
 </head>
 @await Html.PartialAsync("HeaderPartial")
 <body>
@@ -24,7 +19,7 @@
         </main>
     </div>
     @await Html.PartialAsync("FooterPartial")
-    @RenderSection("Scripts", required: false)
+    @await Html.PartialAsync("ScriptsPartial")
 </body>
 
 </html>
