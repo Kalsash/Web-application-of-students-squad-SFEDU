@@ -1,4 +1,15 @@
 @media (max-width: 10000px) {
+    .contact_section::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        height: 100.5%;
+        width: 45%;
+        background-color: #ffffff;
+        -webkit-clip-path: polygon(0 0, 50% 0, 150% 50%, 0% 150%);
+        clip-path: polygon(0 0, 50% 0, 150% 50%, 0% 150%);
+    }
     .somewords {
         padding-top: 20px;
         text-align: center;
@@ -295,6 +306,18 @@
 }
 
 @media (max-width: 768px) {
+    .contact_section::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        height: 100.5%;
+        width: 45%;
+        background-color: #ffffff;
+        -webkit-clip-path: polygon(0 0, 50% 0, 150% 50%, 0% 150%);
+        clip-path: polygon(0 0, 50% 0, 150% 50%, 0% 150%);
+    }
+
     .somewords{
         padding-top: 70px;
         text-align: center;
@@ -400,12 +423,11 @@
     .contact_section .detail-box {
         text-align: center;
         width: auto;
-        margin: 45px;
+        margin: 7px;
     }
 
     .contact_section .detail-box .heading_container {
         align-items: center;
-
     }
 
     .contact_section::before {

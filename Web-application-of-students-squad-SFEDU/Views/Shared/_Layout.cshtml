@@ -13,13 +13,15 @@
 <body>
 
 
-    <div class="container" style="max-width: 100%; padding: 0">
+    <div class="container" style="max-width: 100%; padding: 0; flex: 1 0 auto">@*margin-top: 76px; display: flex; (Задел на будущее)*@
         <main role="main">
             @RenderBody()
         </main>
     </div>
-    @await Html.PartialAsync("FooterPartial")
-    @await Html.PartialAsync("ScriptsPartial")
+    <div style="flex: 0 0 auto">
+        @await Html.PartialAsync("FooterPartial")
+        @RenderSection("Scripts", required: false)
+    </div>
 </body>
 
 </html>
