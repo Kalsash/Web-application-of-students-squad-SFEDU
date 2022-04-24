@@ -9,7 +9,7 @@
         <form asp-controller="News" asp-action="NewsEdit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="TitleImagePath" />
-            <input type="hidden" asp-for="Data" />
+@*            <input type="hidden" asp-for="Data" />*@
             <div asp-validation-summary="All"></div>
 
             <div class="div-box">
@@ -35,7 +35,7 @@
 
             <div style="text-align: center;">
                 <label asp-for="Data" style="align-items: center;"></label>
-                <input type="date" id="Data" name="Data" min="2021-01-01" max="2022-03-22" />
+                <input type="date" id="Data" name="Data" min="2021-01-01" max="2032-01-01" />
                 <span asp-validation-for="Data"></span>
             </div>
             <div style="text-align: center; margin-bottom: 10px">
