@@ -22,8 +22,8 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
 
 
         // Constructor
-        public HomeController(ILogger<HomeController> logger, UserManager<User> userManager, 
-            SignInManager<User> signInManager, ArticlesRepository articlesRepository, ContactsRepository contactRepository)
+        public HomeController(ILogger<HomeController> logger, UserManager<User> userManager,
+        SignInManager<User> signInManager, ArticlesRepository articlesRepository, ContactsRepository contactRepository)
         {
             _logger = logger;
             _userManager = userManager;
@@ -35,7 +35,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         //// Главная
         //public IActionResult Index()
         //{
-        //    return View();
+        // return View();
         //}
 
         //выбираем все записи из БД и передаем их в представление
@@ -124,7 +124,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email, Year = model.Year };
+                User user = new User { Email = model.Email, UserName = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -148,7 +148,21 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             {
                 return NotFound();
             }
-            EditUserViewModel model = new EditUserViewModel { Id = user.Id, Email = user.Email, Year = user.Year };
+            EditUserViewModel model = new EditUserViewModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Surname = user.Surname,
+                Name = user.Name,
+                Patronymic = user.Patronymic,
+                BirthDate = user.BirthDate,
+                DirectionOfSquad = user.DirectionOfSquad,
+                Department = user.Department,
+                Course = user.Course,
+                Group = user.Group,
+                Money = user.Money,
+                VK = user.VK
+            };
             return View(model);
         }
 
@@ -162,7 +176,17 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                 {
                     user.Email = model.Email;
                     user.UserName = model.Email;
-                    user.Year = model.Year;
+                    user.Surname
+                    = model.Surname;
+                    user.Name = model.Name;
+                    user.Patronymic = model.Patronymic;
+                    user.BirthDate = model.BirthDate;
+                    user.DirectionOfSquad = model.DirectionOfSquad;
+                    user.Department = model.Department;
+                    user.Course = model.Course;
+                    user.Group = model.Group;
+                    user.Money = model.Money;
+                    user.VK = model.VK;
 
                     var result = await _userManager.UpdateAsync(user);
                     if (result.Succeeded)
@@ -211,14 +235,14 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                 if (user != null)
                 {
                     IdentityResult result =
-                        await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+                    await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
                     if (result.Succeeded)
                     {
                         return RedirectToAction("Index");
                     }
                     else
                     {
-                     ModelState.AddModelError("", "Неправильный логин и (или) пароль");
+                        ModelState.AddModelError("", "Неправильный логин и (или) пароль");
                     }
                 }
                 else
@@ -229,6 +253,6 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
             return View(model);
         }
         //////////// Users ///////////////////
-        
+
     }
 }

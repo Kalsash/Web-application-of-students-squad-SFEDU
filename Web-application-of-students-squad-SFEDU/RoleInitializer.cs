@@ -13,7 +13,16 @@ namespace Web_application_of_students_squad_SFEDU
         {
             string adminEmail = "Owner@sfedu.ru";
             string password = "IamTheBest1337Admin!";
-            int year = 2000;
+            string surname = "Баринов";
+            string name = "Виктор";
+            string patronymic = "Петрович";
+            string directionOfSquad = "Строительное";
+            string department = "Мехмат"; // Факультет
+            string birthDate = "01.01.1999"; // Дата рождения
+            int course = 2;// Курс
+            int group = 10; // Группа
+            string money = "Бюджет";// Бюджет или коммерция
+            string vk = "https://vk.com/dmitry.kuplinov"; // Ссылка вк
             if (await roleManager.FindByNameAsync("admin") == null)
             {
                 await roleManager.CreateAsync(new IdentityRole("admin"));
@@ -24,7 +33,22 @@ namespace Web_application_of_students_squad_SFEDU
             }
             if (await userManager.FindByNameAsync(adminEmail) == null)
             {
-                User admin = new User { Email = adminEmail, UserName = adminEmail, Year = year, EmailConfirmed = true };
+                User admin = new User
+                {
+                    Email = adminEmail,
+                    UserName = adminEmail,
+                    EmailConfirmed = true,
+                    Surname = surname,
+                    Name = name,
+                    Patronymic = patronymic,
+                    DirectionOfSquad = directionOfSquad,
+                    Department = department,
+                    BirthDate = birthDate,
+                    Course = course,
+                    Group = group,
+                    Money = money,
+                    VK = vk
+                };
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {

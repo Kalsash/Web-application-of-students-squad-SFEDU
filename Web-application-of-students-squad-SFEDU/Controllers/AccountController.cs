@@ -34,24 +34,24 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email, Year = model.Year };
+                User user = new User { Email = model.Email, UserName = model.Email };
 
                 var user2 = await _userManager.FindByNameAsync(model.Email);
                 if (user2 != null)
                     return Content("Пользователь с данным Email уже зарегестрирован!");
                 // добавляем пользователя
                 var result = await _userManager.CreateAsync(user, model.Password);
-                
+
                 if (result.Succeeded)
                 {
                     // установка куки
                     await _signInManager.SignInAsync(user, false);
 
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user); //токен для подтверждения почты
-                    var callbackUrl = Url.Action("ConfirmEmail", "Account",new { userId = user.Id, code = code },protocol: HttpContext.Request.Scheme);
-                    EmailService emailService = new EmailService();
-                    await emailService.SendEmailAsync(model.Email,
-                        $"Подтвердите регистрацию, перейдя по ссылке: <a href='{callbackUrl}'>link</a>");
+                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user); //токен для подтверждения почты
+                    //var callbackUrl = Url.Action("ConfirmEmail", "Account",new { userId = user.Id, code = code },protocol: HttpContext.Request.Scheme);
+                    //EmailService emailService = new EmailService();
+                    //await emailService.SendEmailAsync(model.Email,
+                    // $"Подтвердите регистрацию, перейдя по ссылке: <a href='{callbackUrl}'>link</a>");
 
                     //return Content("Для завершения регистрации проверьте электронную почту и перейдите по ссылке, указанной в письме");
 
@@ -101,19 +101,19 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByNameAsync(model.Email);
-                if (user != null)
-                {
-                    // проверяем, подтвержден ли email
-                    if (!await _userManager.IsEmailConfirmedAsync(user))
-                    {
-                        ModelState.AddModelError(string.Empty, "Вы не подтвердили свой email через почту");
-                        return View(model);
-                    }
-                }
+                //var user = await _userManager.FindByNameAsync(model.Email);
+                //if (user != null)
+                //{
+                // // проверяем, подтвержден ли email
+                // if (!await _userManager.IsEmailConfirmedAsync(user))
+                // {
+                // ModelState.AddModelError(string.Empty, "Вы не подтвердили свой email через почту");
+                // return View(model);
+                // }
+                //}
 
                 var result =
-                    await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
                 if (result.Succeeded)
                 {
                     // проверяем, принадлежит ли URL приложению
@@ -144,4 +144,3 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         }
     }
 }
-
