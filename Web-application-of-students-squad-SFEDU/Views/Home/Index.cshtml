@@ -55,7 +55,10 @@
             </div>
         </div>
      </div>
-    <a class="join_btn" href="https://vk.com/rsosfu?w=app5708398_-93538733">
+@*    <a class="join_btn" href="https://vk.com/rsosfu?w=app5708398_-93538733">
+        Вступить в отряд
+    </a>*@
+     <a class="join_btn" asp-controller="Home" asp-action="Join" asp-route-id="">
         Вступить в отряд
     </a>
 
@@ -126,76 +129,6 @@
             </section>
              }
     </div> 
-        @if (k == 0)
-        {
-            <div class="course_container">
-             <div class="course_content">
-                <div class="box">
-                    <img src="images/c-0.jpg" alt="" />
-                     <a href="" class="">
-                        <img src="images/link.png" alt="" />
-                     </a>
-                    <h5>
-                        Тестовые<br />
-                        новости
-                    </h5>
-                </div>
-                <div class="box">
-                    <img src="images/c-1.jpg" alt="" />
-                    <a href="" class="">
-                        <img src="images/link.png" alt="" />
-                    </a>
-                    <h5>
-                        Тестовые<br />
-                        новости
-                    </h5>
-                </div>
-                <div class="box">
-                    <img src="images/c-2.jpg" alt="" />
-                    <a href="" class="">
-                        <img src="images/link.png" alt="" />
-                    </a>
-                    <h5>
-                       Тестовые<br />
-                        новости
-                    </h5>
-                </div>
-            </div>
-            <div class="course_content">
-                <div class="box">
-                    <img src="images/c-3.jpg" alt="" />
-                    <a href="" class="">
-                        <img src="images/link.png" alt="" />
-                    </a>
-                    <h5>
-                        Тестовые<br />
-                        новости
-                    </h5>
-                </div>
-                <div class="box">
-                    <img src="images/c-4.jpg" alt="" />
-                    <a href="" class="">
-                        <img src="images/link.png" alt="" />
-                    </a>
-                    <h5>
-                        Тестовые<br />
-                        новости
-                    </h5>
-                </div>
-                <div class="box">
-                    <img src="images/c-5.jpg" alt="" />
-                    <a href="" class="">
-                        <img src="images/link.png" alt="" />
-                    </a>
-                    <h5>
-                        Тестовые<br />
-                        новости
-                    </h5>
-                </div>
-            </div>
-        </div>
-            
-        }
         <div class="btn-box">
             <a asp-controller="Articles" asp-action="Index" asp-route-id="">
                 Читать больше...

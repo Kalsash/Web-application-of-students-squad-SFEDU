@@ -68,6 +68,10 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             return View();
         }
+        public IActionResult Join()
+        {
+            return View();
+        }
 
 
         public IActionResult Contacts()
