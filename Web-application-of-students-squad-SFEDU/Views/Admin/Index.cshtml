@@ -1,22 +1,10 @@
-﻿<h2 style=" margin-top: 94px" class="text-center"> Панель Администратора</h2>
+﻿<h2 style=" margin-top: 94px; text-shadow: 1px 1px 2px gray; font-weight: 600" class="text-center"> Панель Администратора</h2>
 
-
-    <div class="div-box text-center">
-          <a asp-controller="News" asp-action="Index" asp-route-id="">Новости сайта</a>
-    </div>
-    <div class="div-box text-center">
-          <a asp-controller="Roles" asp-action="Index" asp-route-id="">Роли сайта</a>
-    </div>
-     <div class="div-box text-center">
-          <a asp-controller="Users" asp-action="Index" asp-route-id="">Список пользователей</a>
-    </div>
-     <div class="div-box text-center">
-          <a asp-controller="Contacts" asp-action="Index" asp-route-id="">Список сообщений от пользователей</a>
-    </div>
-    
-    <div class="div-box text-center" >
-         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>
-    </div>
-     <div class="div-box text-center" style="margin-bottom: 15%">
-          <a asp-controller="Photoes" asp-action="Index" asp-route-id="">Галерея сайта</a>
-    </div>
+<div class="admin_panel">
+    <a class="div-box text-center admin-button" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>
+    <a class="div-box text-center admin-button" asp-controller="Roles" asp-action="Index" asp-route-id="">Роли сайта</a>
+    <a class="div-box text-center admin-button" asp-controller="Users" asp-action="Index" asp-route-id="">Список пользователей</a>
+    <a class="div-box text-center admin-button" asp-controller="Contacts" asp-action="Index" asp-route-id="">Список сообщений от пользователей</a>
+    <a class="div-box text-center admin-button" asp-controller="News" asp-action="Index" asp-route-id="">Новости сайта</a>
+    <a class="div-box text-center admin-button" asp-controller="Photoes" asp-action="Index" asp-route-id="">Галерея сайта</a>
+</div>

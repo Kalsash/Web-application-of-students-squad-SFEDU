@@ -1062,6 +1062,9 @@ img {
     border-radius: 10px;
     padding: 2%;
 }
+.section_news .row{
+    justify-content: center;
+}
 .section_gallery{
 
 }
@@ -1184,6 +1187,35 @@ body .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-co
 ._direction {
     color: #007295;
     text-decoration: underline;
+}
+
+.admin_panel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.admin_panel .text-center{
+    background-color: aliceblue;
+    height: 100px;
+    width: 33%;
+    padding-top: 40px;
+    margin: 10px;
+}
+.admin_panel .text-center:hover{
+    border: solid 3px darkturquoise;
+}
+.admin-button{
+    display: block;
+    color:darkturquoise;
+    font-weight: 600;
+    font-size: 19px;
+    text-shadow:1px 1px 1px black;
+}
+.admin-button:hover{
+    color:darkturquoise;
 }
 @font-face {
     font-family: "AmaticSC-Bold";
