@@ -14,27 +14,24 @@
             <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav  ml-auto">
 
-                    <li class="nav-item">
+                    <li class="nav-item nav-marker">
                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-delete nav-item">
                         <a class="nav-link dropdown-toggle"><span style="text-decoration: underline">Пресс-служба</span></a>
                         <ul class="submenu">
                             <li><a asp-area="" asp-controller="Articles" asp-action="Index">Новости</a></li>
                             <li class="lastli"><a asp-area="" asp-controller="Galery" asp-action="Index">Галерея</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-delete nav-item">
                         <a class="nav-link dropdown-toggle"><span style="text-decoration: underline">Структура</span></a>
                         <ul class="submenu">
                             <li> <a asp-area="" asp-controller="Home" asp-action="Directions">Направления</a></li>
                             <li class="lastli"><a asp-area="" asp-controller="Home" asp-action="About">История и достижения</a></li>
                         </ul>
                     </li>
-                   @* <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Structure">Структура</a>
-                    </li>*@
-                    <li class="nav-item">
+                    <li class="nav-delete nav-item">
                             <a class="nav-link dropdown-toggle"><span style="text-decoration: underline">О нас</span></a>
                             <ul class="submenu">
                                 <li><a asp-area="" asp-controller="Home" asp-action="Stud">Что такое студотряды?</a></li>
@@ -43,7 +40,7 @@
                     </li>
                     @if (User.IsInRole("admin"))
                     {
-                        <li class="nav-item">
+                        <li class="nav-item nav-marker">
                             <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="index">Администратор</a>
                         </li>
                     }
@@ -51,13 +48,13 @@
                     {
                          @if (User.Identity.IsAuthenticated)
                     {
-                        <li class="nav-item">
+                        <li class="nav-item nav-marker">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>
                         </li>
                     }
                     else
                     {
-                        <li class="nav-item">
+                        <li class="nav-item nav-marker">
                             <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
                         </li>
                     }

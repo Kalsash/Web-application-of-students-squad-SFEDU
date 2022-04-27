@@ -1,15 +1,8 @@
 @media (max-width: 10000px) {
-    /*.contact_section::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: -1px;
-        height: 100.5%;
-        width: 45%;
+    body .custom_nav-container .navbar-nav .nav-delete:hover .nav-link, .custom_nav-container .navbar-nav .nav-delete.active .nav-link {
         background-color: #ffffff;
-        -webkit-clip-path: polygon(0 0, 50% 0, 150% 50%, 0% 150%);
-        clip-path: polygon(0 0, 50% 0, 150% 50%, 0% 150%);
-    }*/
+        color: #D73323;
+    }
     .somewords {
         padding-top: 20px;
         text-align: center;
@@ -151,6 +144,10 @@
     }
 }
 @media (max-width: 992px) {
+    body .custom_nav-container .navbar-nav .nav-delete:hover .nav-link, .custom_nav-container .navbar-nav .nav-delete.active .nav-link {
+        background-color: transparent;
+        color: #ffffff;
+    }
     .commanders {
         margin-left: 0;
         max-width: 100%;
