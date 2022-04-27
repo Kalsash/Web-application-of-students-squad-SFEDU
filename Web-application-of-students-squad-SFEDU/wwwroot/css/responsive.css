@@ -87,8 +87,8 @@
         margin-right: 10%;
     }
     .profile_info {
-        margin-left: 33%;
-        margin-right: 33%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     .course_section .course_container .course_content {
         display: -webkit-box;
@@ -128,8 +128,8 @@
         margin-right: 10%;
     }
     .profile_info {
-        margin-left: 33%;
-        margin-right: 33%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
     .course_section .course_container .course_content {
         display: -webkit-box;
@@ -204,8 +204,8 @@
         margin-right: 10%;
     }
     .profile_info {
-        margin-left: 33%;
-        margin-right: 33%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .course_section .course_container .course_content {
         display: -webkit-box;
@@ -341,8 +341,8 @@
         margin-right: 10%;
     }
     .profile_info {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .slider_section .detail-box h1 {
         font-size: 3.5rem;
@@ -414,12 +414,6 @@
         margin: 7px;
     }
 
-/*    .contact_section::before {
-        width: 100%;
-        height: 25%;
-        clip-path: polygon(0% 5%, 100% 5%, 85% 100%, 15% 100%);
-    }*/
-
     .info_section .row>div {
         display: flex;
         flex-direction: column;
@@ -468,8 +462,8 @@
         margin-right: 7%;
     }
     .profile_info {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .course_section .course_container .course_content {
         display: block;
@@ -544,8 +538,8 @@
         margin-right: 4%;
     }
     .profile_info {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .course_section .course_container .course_content {
         display: block;
@@ -612,8 +606,8 @@
         margin-right: 4%;
     }
     .profile_info {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .course_section .course_container .course_content {
         display: block;
@@ -666,8 +660,8 @@
     }
 
     .profile_info {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
     .course_section .course_container .course_content {

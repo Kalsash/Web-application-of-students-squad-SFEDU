@@ -487,7 +487,6 @@ transform: scale(1.3);
 }
 
 .profile_section {
-    background-image: url(../images/login-bg.webp);
     background-size: cover;
     color: #ffffff;
     padding-top: 15%;
@@ -495,17 +494,41 @@ transform: scale(1.3);
     padding-bottom: 15%;
     height: auto;
 }
+
+.form-control{
+    font-size: 26px;
+}
+
 .profile_info {
-    position: center;
     border-radius: 10px;
-    background-color: #ffffffbe;
+    background-color: #fffa;
     padding: 5px 0px;
+    word-wrap: break-word;
 }
 
 .profile_info p {
     text-align: center;
     font-size: 25px;
 }
+
+.profile_info div {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-family: 'AmaticSC-Bold';
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.profile_info div {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #ffffffab;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 .profile_info form {
     margin-top: 40px;
     text-align: center;

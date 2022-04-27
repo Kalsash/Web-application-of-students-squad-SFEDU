@@ -30,6 +30,7 @@
     <div class="form-group" style="padding: 10px">
         <label asp-for="DirectionOfSquad" class="control-label" style="color: black">Направление отряда</label>
         <select asp-for="DirectionOfSquad" class="form-control">
+            <option value="Никакое">Пусто</option>
             <option value="Педагогическое">Педагогическое (здесь же спортивно-педагогический отряд)</option>
             <option value="Строительное">Строительное</option>
             <option value="Сервисное">Сервисное (здесь же информационный отряд)</option>
@@ -60,7 +61,7 @@
         <label asp-for="VK" class="control-label" style="color: black">Ссылка VK</label>
         <input type="text" asp-for="VK" class="form-control" />
     </div>
-    <div class="form-group">
+    <p class="form-group">
         <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />
-    </div>
+    </p>
 </form>

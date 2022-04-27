@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Web_application_of_students_squad_SFEDU.Models.User>
-
+<div class="hero_area2  fixed-top" style=" z-index: -1030 ">  </div>
 <section class="profile_section">
     <div class="profile_info">
         
@@ -7,18 +7,18 @@
         {
         if (user.Email == User.Identity.Name)
         {
-        <p style="color: red; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Личный кабинет</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Логин: @User.Identity.Name</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Фамилия: @user.Surname</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Имя: @user.Name</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Отчество: @user.Patronymic</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Дата рождения: @user.BirthDate</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Направление отряда: @user.DirectionOfSquad</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Факультет: @user.Department</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Курс: @user.Course</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Группа: @user.Group</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Бюджет/Коммерция: @user.Money</b></p>
-        <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Ссылка VK: @user.VK</b></p>
+        <p style="color: red; font-family: 'AmaticSC-Bold'; font-size: 60px; "><b>Личный кабинет</b></p>
+        <div><b>Логин: @User.Identity.Name</b></div>
+        <div><b>Фамилия: @user.Surname</b></div>
+        <div><b>Имя: @user.Name</b></div>
+        <div><b>Отчество: @user.Patronymic</b></div>
+        <div><b>Дата рождения: @user.BirthDate</b></div>
+        <div><b>Направление отряда: @user.DirectionOfSquad</b></div>
+        <div><b>Факультет: @user.Department</b></div>
+        <div><b>Курс: @user.Course</b></div>
+        <div><b>Группа: @user.Group</b></div>
+        <div><b>Бюджет/Коммерция: @user.Money</b></div>
+        <div><b>Ссылка VK: @user.VK</b></div>
 
 
         <p> <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Изменить персональные данные</a></p>
