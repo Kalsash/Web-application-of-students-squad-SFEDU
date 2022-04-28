@@ -1,4 +1,4 @@
-body {
+body{
   font-family: "Poppins", sans-serif;
   color: #000000;
   background-color: #ffffff;
@@ -82,6 +82,14 @@ header.header_section {
     height: 100vh;
     background-color: #b5caee;
     background-image: url(../images/login-bg.webp);
+    background-size: cover;
+}
+
+.hero_area3 {
+    margin-top: 0px;
+    height: 100vh;
+    background-color: #b5caee;
+    background-image: url(../images/join.jpg);
     background-size: cover;
 }
 
@@ -1257,5 +1265,102 @@ font-weight: normal;
     src: url("../fonts/beer money.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
+}
+
+.join {
+   /*background-image: url(../images/join.jpg);*/
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
+    text-align: center;
+}
+
+.joinForm {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: aliceblue;
+    display: inline-block;
+    border-radius: 5%;
+}
+
+.joinForm > fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.joinForm fieldset > legend {
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.joinForm label {
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+}
+
+.joinForm em {
+    font-weight: bold;
+    font-style: normal;
+    color: #f00;
+}
+
+.joinForm input:focus {
+    background: #eaeaea;
+}
+
+.joinForm input, textarea {
+    width: 280px;
+    border: solid 2px;
+    border-radius: 3px;
+}
+
+.joinForm textarea {
+    height: 50px;
+}
+
+.joinForm select {
+    width: 280px;
+    border: solid 2px;
+    border-radius: 4px;
+}
+
+.joinForm input[type=checkbox] {
+    width: 10px;
+}
+
+.joinForm input[type=submit] {
+    width: 170px;
+    padding: 10px;
+    overflow: hidden;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    background-color: #cf2f1d;
+    border: 4px solid #ffffff;
+    font-weight: 500;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: all ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.joinForm input[type=submit]:hover {
+    background-color: transparent;
+    color: #cf2f1d;
+    border: 4px solid #cf2f1d;
+    text-decoration: underline;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
 }
 
