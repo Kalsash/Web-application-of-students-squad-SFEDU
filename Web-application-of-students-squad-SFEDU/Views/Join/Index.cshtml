@@ -1,0 +1,21 @@
+﻿@model IQueryable<Join>
+    <div style="background-color: lightgray; margin-top: 70px; padding: 20px 0;">
+        <div style="text-align: center; background-color: white; margin-left: 10%; margin-right: 10%;">
+            <h1>Список заявок на вступление: </h1>
+            @foreach (Join entity in Model)
+            {
+                <h4 style="margin-top: 40px"><span style="text-decoration: underline">Фамилия:</span> @entity.SurName</h4>
+                <h4><span style="text-decoration: underline">Имя:</span> @entity.Name</h4>
+                <h4><span style="text-decoration: underline">Отчество:</span> @entity.Patronymic</h4>
+                <h4><span style="text-decoration: underline">Номер телефонa:</span> @entity.PhoneNumber</h4>
+                <h4><span style="text-decoration: underline">Возраст:</span> @entity.Age</h4>
+                <h4><span style="text-decoration: underline">Пол:</span> @entity.Gender</h4>
+                <h4><span style="text-decoration: underline">Интересующее направление:</span> @entity.DirectionOfSquad</h4>
+                <h4><span style="text-decoration: underline">Факультет:</span> @entity.Department</h4>
+                    <form method="post" asp-controller="Join" asp-action="JoinDelete">
+                        <input type="hidden" name="Id" value="@entity.Id" />
+                        <input type="submit" style="margin-top:10px; margin-bottom: 10px" value="удалить" />
+                    </form>
+            }
+        </div>
+    </div>
