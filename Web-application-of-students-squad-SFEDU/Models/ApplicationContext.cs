@@ -17,6 +17,8 @@ namespace Web_application_of_students_squad_SFEDU.Models
         public DbSet<Article> Articles { get; set; }
 
         public DbSet<Contact> Contacts { get; set; }
+
+        public DbSet<Join> Join { get; set; }
         public DbSet<Galery> Photoes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,8 +30,7 @@ namespace Web_application_of_students_squad_SFEDU.Models
                 Title = "Тестовая новость",
                 Text = "Добавьте какую-нибудь новость в панели администратора!",
                 TitleImagePath = "emblem.jpg", 
-                Data = DateTime.Now
-        });
+                Data = DateTime.Now});
 
             modelBuilder.Entity<Contact>().HasData(new Contact
             {
@@ -38,6 +39,18 @@ namespace Web_application_of_students_squad_SFEDU.Models
                 FullName = "Victor Barinov",
                 PhoneNumber = "+7555333222",
                 TextMessage = "Hello World!"
+            });
+            modelBuilder.Entity<Join>().HasData(new Join
+            {
+                Id = new Guid("816C2E99-6F6C-4472-81A5-43C56E11637D"),
+                SurName = "Куплинов",
+                Name = "Дмитрий",
+                Patronymic = "Сергеевич",
+                PhoneNumber = "+7898325132",
+                Age = 18,
+                Gender = "Мужской",
+                DirectionOfSquad = "Строительное",
+                Department = "Физфак"
             });
 
             modelBuilder.Entity<Galery>().HasData(new Galery
