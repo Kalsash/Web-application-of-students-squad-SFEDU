@@ -19,17 +19,19 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ArticlesRepository articlesRepository;
         private readonly ContactsRepository contactRepository;
+        private readonly JoinRepository JoinRepository;
 
 
         // Constructor
         public HomeController(ILogger<HomeController> logger, UserManager<User> userManager,
-        SignInManager<User> signInManager, ArticlesRepository articlesRepository, ContactsRepository contactRepository)
+        SignInManager<User> signInManager, ArticlesRepository articlesRepository, ContactsRepository contactRepository, JoinRepository joinRepository)
         {
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
             this.articlesRepository = articlesRepository;
             this.contactRepository = contactRepository;
+            JoinRepository = joinRepository;
         }
 
         //// Главная
@@ -68,12 +70,21 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             return View();
         }
+
         public IActionResult Join()
         {
             return View();
         }
-
-
+        [HttpPost]
+        public IActionResult Join(Join model)
+        {
+            if (model.SurName != null)
+            {
+                JoinRepository.SaveArticle(model);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
         public IActionResult Contacts()
         {
             return View();
@@ -176,8 +187,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                 {
                     user.Email = model.Email;
                     user.UserName = model.Email;
-                    user.Surname
-                    = model.Surname;
+                    user.Surname= model.Surname;
                     user.Name = model.Name;
                     user.Patronymic = model.Patronymic;
                     user.BirthDate = model.BirthDate;

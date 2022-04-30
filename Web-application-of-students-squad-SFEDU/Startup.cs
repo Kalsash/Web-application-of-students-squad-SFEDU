@@ -28,6 +28,7 @@ namespace Web_application_of_students_squad_SFEDU
 
             services.AddTransient<ArticlesRepository>();
             services.AddTransient<ContactsRepository>();
+            services.AddTransient<JoinRepository>();
             services.AddTransient<GaleryRepository>();
 
             services.AddTransient<IPasswordValidator<User>,
