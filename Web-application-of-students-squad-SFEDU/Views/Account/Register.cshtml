@@ -12,32 +12,32 @@
                         <div asp-validation-summary="ModelOnly"></div>
                         <div>
                             <label asp-for="Email"></label><br />
-                            <input asp-for="Email" />
+                            <input maxlength="60" asp-for="Email" />
                             <span asp-validation-for="Email"></span>
                         </div>
                         <div>
                             <label asp-for="Password"></label><br />
-                            <input asp-for="Password" />
+                            <input maxlength="40" asp-for="Password" />
                             <span asp-validation-for="Password"></span>
                         </div>
                         <div>
                             <label asp-for="PasswordConfirm"></label><br />
-                            <input asp-for="PasswordConfirm" />
+                            <input maxlength="40" asp-for="PasswordConfirm" />
                             <span asp-validation-for="PasswordConfirm"></span>
                         </div>
                         <div>
                             <label asp-for="Surname" >Фамилия</label><br />
-                            <input asp-for="Surname" />
+                            <input maxlength="40" asp-for="Surname" />
                             <span asp-validation-for="Surname"></span>
                         </div>
                         <div>
                             <label asp-for="Name">Имя</label><br />
-                            <input asp-for="Name" />
+                            <input maxlength="40" asp-for="Name" />
                             <span asp-validation-for="Name"></span>
                         </div>
                         <div>
                             <label asp-for="Patronymic">Отчество</label><br />
-                            <input asp-for="Patronymic" />
+                            <input maxlength="40" asp-for="Patronymic" />
                             <span asp-validation-for="Patronymic"></span>
                         </div>
                         <div>
@@ -57,22 +57,22 @@
                         </div>
                         <div>
                             <label asp-for="NameOfSquad">Название отряда</label><br />
-                            <input asp-for="NameOfSquad" />
+                            <input maxlength="60" asp-for="NameOfSquad" />
                             <span asp-validation-for="NameOfSquad"></span>
                         </div>
                         <div>
                             <label asp-for="Department">Факультет</label><br />
-                            <input asp-for="Department" />
+                            <input maxlength="40" asp-for="Department" />
                             <span asp-validation-for="Department"></span>
                         </div>
                         <div>
-                            <label asp-for="Course">Курс</label><br />
-                            <input asp-for="Course" />
+                            <label asp-for="Course">Курс(например, Бакалавриат, 3 курс)</label><br />
+                            <input maxlength="40" asp-for="Course" />
                             <span asp-validation-for="Course"></span>
                         </div>
                         <div>
-                            <label asp-for="Group">Группа</label><br />
-                            <input asp-for="Group" />
+                            <label asp-for="Group">Группа(например, ФИиИТ, 11 группа)</label><br />
+                            <input maxlength="20" asp-for="Group" />
                             <span asp-validation-for="Group"></span>
                         </div>
                         <div>
@@ -85,7 +85,7 @@
                         </div>
                         <div>
                             <label asp-for="VK">Ссылка VK</label><br />
-                            <input asp-for="VK" />
+                            <input maxlength="80" asp-for="VK" />
                             <span asp-validation-for="VK"></span>
                         </div>
                         <button type="submit">Зарегистрироваться</button>

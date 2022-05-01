@@ -49,20 +49,13 @@ namespace Web_application_of_students_squad_SFEDU.Models
                     Description = "Факультет должен состоять из букв!"
                 });
             }
-            //if (user.Group <1 || user.Group > 100)
-            //{
-            //    errors.Add(new IdentityError
-            //    {
-            //        Description = "Неверный номер группы!"
-            //    });
-            //}
-            //if (user.Course < 1 || user.Course > 6)
-            //{
-            //    errors.Add(new IdentityError
-            //    {
-            //        Description = "Неверный курс!"
-            //    });
-            //}
+            if (!Regex.IsMatch(user.NameOfSquad, "^[a-zA-ZА-яа-я]+$"))
+            {
+                errors.Add(new IdentityError
+                {
+                    Description = "Название отряда должно состоять из букв!"
+                });
+            }
 
             return Task.FromResult(errors.Count == 0 ?
             IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
