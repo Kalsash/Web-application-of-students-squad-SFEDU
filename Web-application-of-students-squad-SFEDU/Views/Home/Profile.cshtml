@@ -12,6 +12,7 @@
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Логин: @User.Identity.Name</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Фамилия: @user.Surname</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Имя: @user.Name</b></p>
+
         string s = "";
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Отчество: @user.Patronymic</b></p>
             foreach (Match match in Regex.Matches(user.BirthDate, "([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})"))

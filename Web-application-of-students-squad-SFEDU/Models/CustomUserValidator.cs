@@ -63,41 +63,6 @@ namespace Web_application_of_students_squad_SFEDU.Models
                     Description = "Неверный курс!"
                 });
             }
-            if (user.VK.Length > 100)
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Слишком длинная ссылка!"
-                });
-            }
-            if (user.Surname.Length > 40)
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Слишком длинная Фамилия!"
-                });
-            }
-            if (user.Name.Length > 40)
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Слишком длинное Имя!"
-                });
-            }
-            if (user.Patronymic.Length > 40)
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Слишком длинное Отчество!"
-                });
-            }
-            if (user.Department.Length > 100)
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Слишком длинное название факультета!"
-                });
-            }
 
             return Task.FromResult(errors.Count == 0 ?
             IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));

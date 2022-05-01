@@ -14,17 +14,17 @@
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Surname" class="control-label" style="color: black">Фамилия</label>
-                <input type="text" asp-for="Surname" class="form-control" />
+                <input type="text" maxlength="40"asp-for="Surname" class="form-control" />
                 <span asp-validation-for="Surname"></span>
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Name" class="control-label" style="color: black">Имя</label>
-                <input type="text" asp-for="Name" class="form-control" />
+                <input type="text" maxlength="40" asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name"></span>
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Patronymic" class="control-label" style="color: black">Отчество</label>
-                <input type="text" asp-for="Patronymic" class="form-control" />
+                <input type="text" maxlength="40" asp-for="Patronymic" class="form-control" />
                 <span asp-validation-for="Patronymic"></span>
             </div>
             <div class="form-group" style="padding: 10px">
@@ -42,17 +42,17 @@
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Department" class="control-label" style="color: black">Факультет</label>
-                <input type="text" asp-for="Department" class="form-control" />
+                <input type="text" maxlength="40" asp-for="Department" class="form-control" />
                 <span asp-validation-for="Department"></span>
             </div>
 
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Course" class="control-label" style="color: black">Курс</label>
-                <input type="number" asp-for="Course" class="form-control" />
+                <input type="number" maxlength="40" asp-for="Course" class="form-control" />
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Group" class="control-label" style="color: black">Группа</label>
-                <input type="number" asp-for="Group" class="form-control" />
+                <input type="number" maxlength="40" asp-for="Group" class="form-control" />
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="Money" class="control-label" style="color: black">Бюджет/Коммерция</label>
@@ -63,7 +63,7 @@
             </div>
             <div class="form-group" style="padding: 10px">
                 <label asp-for="VK" class="control-label" style="color: black">Ссылка VK</label>
-                <input type="text" asp-for="VK" class="form-control" />
+                <input type="text" maxlength="80" asp-for="VK" class="form-control" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Сохранить" class="btn btn-outline-secondary" style="border: 1px solid black; background-color: #eeedf7; color: black; " />

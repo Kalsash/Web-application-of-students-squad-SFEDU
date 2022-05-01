@@ -9,19 +9,19 @@
             <legend>Контактная информация</legend>
             <div>
                 <label asp-for="SurName"><i>Фамилия</i> <em>*</em></label>
-                <input type="text" asp-for="SurName" />
+                <input type="text" maxlength="40" asp-for="SurName" />
             </div>
              <div>
                 <label asp-for="Name"><i>Имя</i> <em>*</em></label>
-                <input type="text" asp-for="Name" />
+                <input type="text" maxlength="40" asp-for="Name" />
             </div>
              <div>
                 <label asp-for="Patronymic">Отчество</label>
-                <input type="text" asp-for="Patronymic" />
+                <input type="text" maxlength="40" asp-for="Patronymic" />
             </div>
              <div>
                 <label asp-for="PhoneNumber"><i>Телефон</i> <em>*</em></label>
-                <input type="tel" asp-for="PhoneNumber" />
+                <input type="text" maxlength="20"asp-for="PhoneNumber" />
             </div>
         </fieldset>
         <fieldset>
@@ -49,7 +49,7 @@
             </div>
             <div>
                 <label asp-for="Department">Факультет</label>
-                <input type="text" asp-for="Department" />
+                <input type="text"  maxlength="40" asp-for="Department" />
             </div>
         </fieldset>
         <p><i>Мы скоро с Вами обязательно свяжемся!</i></p>
