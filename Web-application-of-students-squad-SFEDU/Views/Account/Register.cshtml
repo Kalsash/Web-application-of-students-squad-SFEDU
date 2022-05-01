@@ -25,6 +25,69 @@
                             <input asp-for="PasswordConfirm" />
                             <span asp-validation-for="PasswordConfirm"></span>
                         </div>
+                        <div>
+                            <label asp-for="Surname"></label><br />
+                            <input asp-for="Surname" />
+                            <span asp-validation-for="Surname"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Name"></label><br />
+                            <input asp-for="Name" />
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Patronymic"></label><br />
+                            <input asp-for="Patronymic" />
+                            <span asp-validation-for="Patronymic"></span>
+                        </div>
+                        <div>
+                            <label asp-for="BirthDate"></label><br />
+                            <input type="date" min="1922-01-01" max="2012-01-01" asp-for="BirthDate" />
+                            <span asp-validation-for="BirthDate"></span>
+                        </div>
+                        <div>
+                            <label asp-for="DirectionOfSquad"></label><br />
+                             <select asp-for="DirectionOfSquad">
+                    <option value="Педагогическое">Педагогическое (здесь же спортивно-педагогический отряд)</option>
+                    <option value="Строительное">Строительное</option>
+                    <option value="Сервисное">Сервисное (здесь же информационный отряд)</option>
+                    <option value="Отряд проводников">Отряд проводников</option>
+                       </select><br>
+                            <span asp-validation-for="DirectionOfSquad"></span>
+                        </div>
+                        <div>
+                            <label asp-for="NameOfSquad"></label><br />
+                            <input asp-for="NameOfSquad" />
+                            <span asp-validation-for="NameOfSquad"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Department"></label><br />
+                            <input asp-for="Department" />
+                            <span asp-validation-for="Department"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Course"></label><br />
+                            <input asp-for="Course" />
+                            <span asp-validation-for="Course"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Group"></label><br />
+                            <input asp-for="Group" />
+                            <span asp-validation-for="Group"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Money"></label><br />
+                             <select asp-for="Money">
+                    <option value="Бюджет">Бюджет</option>
+                    <option value="Коммерция">Коммерция</option>
+                </select><br>
+                            <span asp-validation-for="Money"></span>
+                        </div>
+                        <div>
+                            <label asp-for="VK"></label><br />
+                            <input asp-for="VK" />
+                            <span asp-validation-for="VK"></span>
+                        </div>
                         <button type="submit">Зарегистрироваться</button>
                     </form>
                 </div>

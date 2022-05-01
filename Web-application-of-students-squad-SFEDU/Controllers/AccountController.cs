@@ -34,7 +34,22 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email };
+                User user = new User { 
+                    Email = model.Email, 
+                    UserName = model.Email,
+                    Surname = model.Surname,
+                    Name = model.Name,
+                    Patronymic = model.Patronymic,
+                    BirthDate = model.BirthDate,
+                    DirectionOfSquad = model.DirectionOfSquad,
+                    NameOfSquad = model.NameOfSquad,
+                    Department = model.Department,
+                    Course = model.Course,
+                    Group = model.Group,
+                    Money = model.Money,
+                    VK = model.VK
+
+                };
 
                 var user2 = await _userManager.FindByNameAsync(model.Email);
                 if (user2 != null)
