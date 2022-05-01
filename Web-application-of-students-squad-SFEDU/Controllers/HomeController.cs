@@ -168,6 +168,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                 Patronymic = user.Patronymic,
                 BirthDate = user.BirthDate,
                 DirectionOfSquad = user.DirectionOfSquad,
+                NameOfSquad = user.NameOfSquad,
                 Department = user.Department,
                 Course = user.Course,
                 Group = user.Group,
@@ -192,6 +193,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                     user.Patronymic = model.Patronymic;
                     user.BirthDate = model.BirthDate;
                     user.DirectionOfSquad = model.DirectionOfSquad;
+                    user.NameOfSquad = model.NameOfSquad;
                     user.Department = model.Department;
                     user.Course = model.Course;
                     user.Group = model.Group;

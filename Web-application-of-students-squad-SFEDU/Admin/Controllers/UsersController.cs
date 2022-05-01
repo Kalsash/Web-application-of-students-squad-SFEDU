@@ -22,8 +22,6 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
 
         public IActionResult Create() => View();
 
-        public IActionResult Profile() => View(_userManager.Users.ToList());
-
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserViewModel model)
         {
@@ -62,6 +60,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                 Patronymic = user.Patronymic,
                 BirthDate = user.BirthDate,
                 DirectionOfSquad = user.DirectionOfSquad,
+                NameOfSquad = user.NameOfSquad,
                 Department = user.Department,
                 Course = user.Course,
                 Group = user.Group,
@@ -86,6 +85,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                     user.Patronymic = model.Patronymic;
                     user.BirthDate = model.BirthDate;
                     user.DirectionOfSquad = model.DirectionOfSquad;
+                    user.NameOfSquad = model.NameOfSquad;
                     user.Department = model.Department;
                     user.Course = model.Course;
                     user.Group = model.Group;

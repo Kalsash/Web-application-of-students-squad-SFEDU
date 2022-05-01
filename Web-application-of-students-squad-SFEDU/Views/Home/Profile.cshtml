@@ -12,9 +12,8 @@
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Логин: @User.Identity.Name</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Фамилия: @user.Surname</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Имя: @user.Name</b></p>
-
-        string s = "";
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Отчество: @user.Patronymic</b></p>
+        string s = "";           
             foreach (Match match in Regex.Matches(user.BirthDate, "([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})"))
                        {
                     s = match.Groups[3].Value + "." + match.Groups[2].Value + "." +match.Groups[1].Value;
@@ -23,6 +22,7 @@
                 user.BirthDate = s;
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Дата рождения:  @user.BirthDate</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Направление отряда: @user.DirectionOfSquad</b></p>
+            <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Название отряда: @user.NameOfSquad</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Факультет: @user.Department</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Курс: @user.Course</b></p>
             <p style="color: black; font-family: 'AmaticSC-Bold'; font-size: 35px"><b>Группа: @user.Group</b></p>
