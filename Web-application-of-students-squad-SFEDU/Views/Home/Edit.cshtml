@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Редактирование пользователя";
 }
+<div class="hero_area2  fixed-top" style=" z-index: -1030 ">  </div>
 <section class="profile_section">
     <div class="profile_info">
         <form asp-action="Edit" asp-controller="Home">
@@ -34,6 +35,7 @@
             <div class="form-group" style="padding: 10px">
                 <label asp-for="DirectionOfSquad" class="control-label" style="color: black">Направление отряда</label>
                 <select asp-for="DirectionOfSquad" class="form-control">
+                    <option value="Никакое">Пусто</option>
                     <option value="Педагогическое">Педагогическое (здесь же спортивно-педагогический отряд)</option>
                     <option value="Строительное">Строительное</option>
                     <option value="Сервисное">Сервисное (здесь же информационный отряд)</option>
