@@ -30,6 +30,60 @@ header.header_section {
     display:block;
 }
 
+.tagline{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.marquee-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee {
+    line-height: 1.5;
+    color: black;
+    white-space: nowrap;
+    animation: marquee 45s infinite linear;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.marquee:after{
+    content: "Работа на лето - Полезные знакомства - Семья - Новые знания - Ценности - Новые возможности - Путешествия - Самореализация - Любовь - Традиции - Друзья - Бесценный опыт - Школа жизни - Рост - Развитие - Молодость - Взаимопомощь - Поддержка - Взаимопонимание - Творчество и спорт - Навсегда - ";
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+.SBH {
+    font-size: 25px;
+    color: red;
+    text-transform: uppercase;
+}
+
+.tagline .slide{
+    flex-direction: column;
+}
+
+.words{
+justify-content: center;
+}
+
 .layout_padding {
   padding: 90px 0;
 }
