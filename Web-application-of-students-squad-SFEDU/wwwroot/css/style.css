@@ -26,6 +26,10 @@ header.header_section {
     background-color: #cf2f1d;
 }
 
+.submenu a{
+    display:block;
+}
+
 .layout_padding {
   padding: 90px 0;
 }
