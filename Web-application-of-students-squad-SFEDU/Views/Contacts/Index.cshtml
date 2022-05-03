@@ -8,7 +8,7 @@
                 <h4><span style="text-decoration: underline">Полное имя:</span> @entity.FullName</h4>
                 <h4><span style="text-decoration: underline">Номер телефонa:</span> @entity.PhoneNumber</h4>
                 <h4><span style="text-decoration: underline">Сообщение:</span></h4>
-                <h5 style="border: 3px dashed gray; border-radius: 10px; margin: 0 5%">@entity.TextMessage</h5>
+                <h5 style="border: 3px solid #85838369; border-radius: 10px; margin: 0 5%">@entity.TextMessage</h5>
                     <form method="post" asp-controller="Contacts" asp-action="ContactDelete">
                         <input type="hidden" name="Id" value="@entity.Id" />
                         <input type="submit" style="margin-top:10px; margin-bottom: 10px" value="удалить" />
