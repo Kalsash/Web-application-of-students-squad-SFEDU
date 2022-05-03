@@ -10,18 +10,22 @@
             <div>
                 <label asp-for="SurName"><i>Фамилия</i> <em>*</em></label>
                 <input type="text" maxlength="40" asp-for="SurName" />
+                <span asp-validation-for="SurName"></span>
             </div>
              <div>
                 <label asp-for="Name"><i>Имя</i> <em>*</em></label>
                 <input type="text" maxlength="40" asp-for="Name" />
+                <span asp-validation-for="Name"></span>
             </div>
              <div>
                 <label asp-for="Patronymic">Отчество</label>
                 <input type="text" maxlength="40" asp-for="Patronymic" />
+                <span asp-validation-for="Patronymic"></span>
             </div>
              <div>
                 <label asp-for="PhoneNumber"><i>Телефон</i> <em>*</em></label>
                 <input type="text" maxlength="20"asp-for="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber"></span>
             </div>
         </fieldset>
         <fieldset>
@@ -50,6 +54,7 @@
             <div>
                 <label asp-for="Department">Факультет</label>
                 <input type="text"  maxlength="40" asp-for="Department" />
+                <span asp-validation-for="Department"></span>
             </div>
         </fieldset>
         <p><i>Мы скоро с Вами обязательно свяжемся!</i></p>
