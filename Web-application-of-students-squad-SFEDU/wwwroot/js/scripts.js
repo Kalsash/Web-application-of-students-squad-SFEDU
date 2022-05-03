@@ -4768,14 +4768,14 @@ $(document).ready(function () {
 
             var windowStyles = {};
 
-            if (mfp.fixedContentPos) {
-                if (mfp._hasScrollBar(windowHeight)) {
-                    var s = mfp._getScrollbarSize();
-                    if (s) {
-                        windowStyles.marginRight = s;
-                    }
-                }
-            }
+            //if (mfp.fixedContentPos) {
+            //    if (mfp._hasScrollBar(windowHeight)) {
+            //        var s = mfp._getScrollbarSize();
+            //        if (s) {
+            //            windowStyles.marginRight = s;
+            //        }
+            //    }
+            //}
 
             if (mfp.fixedContentPos) {
                 if (!mfp.isIE7) {
