@@ -42,20 +42,20 @@ namespace Web_application_of_students_squad_SFEDU.Models
                     Description = "Отчество должно состоять из букв!"
                 });
             }
-            if (!Regex.IsMatch(user.Department, "^[a-zA-ZА-яа-я]+$"))
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Факультет должен состоять из букв!"
-                });
-            }
-            if (!Regex.IsMatch(user.NameOfSquad, "^[a-zA-ZА-яа-я]+$"))
-            {
-                errors.Add(new IdentityError
-                {
-                    Description = "Название отряда должно состоять из букв!"
-                });
-            }
+            //if (!Regex.IsMatch(user.Department, "^[a-zA-ZА-яа-я]+$"))
+            //{
+            //    errors.Add(new IdentityError
+            //    {
+            //        Description = "Факультет должен состоять из букв!"
+            //    });
+            //}
+            //if (!Regex.IsMatch(user.NameOfSquad, "^[a-zA-ZА-яа-я]+$"))
+            //{
+            //    errors.Add(new IdentityError
+            //    {
+            //        Description = "Название отряда должно состоять из букв!"
+            //    });
+            //}
 
             return Task.FromResult(errors.Count == 0 ?
             IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
