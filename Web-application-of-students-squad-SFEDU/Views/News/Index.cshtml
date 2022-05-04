@@ -11,7 +11,7 @@
     {
 <div>
     <h4>@entity.Title</h4>
-     <h4>@entity.Data</h4>
+     <h4>@entity.Data.ToShortDateString()</h4>
     <div style="margin-bottom: 5px">
         |
         <a asp-controller="News" asp-action="NewsEdit" asp-route-id="@entity.Id">Редактировать</a>

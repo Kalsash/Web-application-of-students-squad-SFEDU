@@ -13,9 +13,9 @@
             <div asp-validation-summary="All"></div>
 
             <div class="div-box">
-                <div style="margin-bottom: 10px">
+@*                <div style="margin-bottom: 10px">
                     <img class="img-block" src="~/images/news/@Model.TitleImagePath" style="width: 50%; margin-left: 25%" />
-                </div>
+                </div>*@
                 <div style="text-align: center; margin-bottom: 20px">
                     <label asp-for="TitleImagePath"></label>
                     <input type="file" name="titleImageFile" id="titleImageFile" />
@@ -35,7 +35,7 @@
 
             <div style="text-align: center;">
                 <label asp-for="Data" style="align-items: center;"></label>
-                <input type="date" id="Data" name="Data" min="2021-01-01" max="2032-01-01" />
+                <input type="date" id="Data" name="Data" min="2021-01-01" max="2032-01-01"  />
                 <span asp-validation-for="Data"></span>
             </div>
             <div style="text-align: center; margin-bottom: 10px">

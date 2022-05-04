@@ -80,10 +80,7 @@ namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
                     //using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/news/", titleImageFile.FileName), FileMode.Create))
                     //{
                     //    titleImageFile.CopyTo(stream);
-                    //}
-
-
-
+                    //
                 }
                 articlesRepository.SaveArticle(model);
                 return RedirectToAction("Index");
