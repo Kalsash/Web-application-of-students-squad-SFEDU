@@ -11,7 +11,7 @@ using Web_application_of_students_squad_SFEDU.Models;
 
 namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize(Roles = "moderator")]
     public class NewsController : Controller
     {
         private readonly ArticlesRepository articlesRepository;

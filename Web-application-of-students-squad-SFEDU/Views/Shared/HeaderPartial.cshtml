@@ -46,7 +46,14 @@
                     }
                     else
                     {
-                         @if (User.Identity.IsAuthenticated)
+                        @if (User.IsInRole("moderator"))
+                    {
+                        <li class="nav-item nav-marker">
+                            <a class="nav-link" asp-area="" asp-controller="Moderator" asp-action="index">Модератор</a>
+                        </li>
+                    }
+                    else
+                        @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item nav-marker">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>

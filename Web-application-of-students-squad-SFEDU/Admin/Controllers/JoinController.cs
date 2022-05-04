@@ -5,8 +5,8 @@ using Web_application_of_students_squad_SFEDU.Models;
 
 namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
 {
-        [Authorize(Roles = "admin")]
-        public class JoinController : Controller
+    [Authorize(Roles = "moderator")]
+    public class JoinController : Controller
         {
             private readonly JoinRepository JoinRepository;
             public JoinController(JoinRepository JoinRepository)

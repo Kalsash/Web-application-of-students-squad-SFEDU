@@ -12,7 +12,9 @@ namespace Web_application_of_students_squad_SFEDU
         public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
             string adminEmail = "Owner@sfedu.ru";
-            string password = "IamTheBest1337Admin!";
+            string adminPassword = "IamTheBest1337Admin!";
+            string moderatorEmail = "Moderator@sfedu.ru";
+            string moderatorPassword = "ProEditor4Ev3r";
             string surname = "Баринов";
             string name = "Виктор";
             string patronymic = "Петрович";
@@ -28,9 +30,9 @@ namespace Web_application_of_students_squad_SFEDU
             {
                 await roleManager.CreateAsync(new IdentityRole("admin"));
             }
-            if (await roleManager.FindByNameAsync("employee") == null)
+            if (await roleManager.FindByNameAsync("moderator") == null)
             {
-                await roleManager.CreateAsync(new IdentityRole("employee"));
+                await roleManager.CreateAsync(new IdentityRole("moderator"));
             }
             if (await userManager.FindByNameAsync(adminEmail) == null)
             {
@@ -51,10 +53,33 @@ namespace Web_application_of_students_squad_SFEDU
                     Money = money,
                     VK = vk
                 };
-                IdentityResult result = await userManager.CreateAsync(admin, password);
+                User moderator = new User
+                {
+                    Email = moderatorEmail,
+                    UserName = moderatorEmail,
+                    EmailConfirmed = true,
+                    Surname = surname,
+                    Name = name,
+                    Patronymic = patronymic,
+                    DirectionOfSquad = directionOfSquad,
+                    NameOfSquad = nameOfSquad,
+                    Department = department,
+                    BirthDate = birthDate,
+                    Course = course,
+                    Group = group,
+                    Money = money,
+                    VK = vk
+                };
+                IdentityResult result = await userManager.CreateAsync(admin, adminPassword);
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(admin, "admin");
+                    await userManager.AddToRoleAsync(admin, "moderator");
+                }
+                result = await userManager.CreateAsync(moderator, moderatorPassword);
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(moderator, "moderator");
                 }
             }
         }
