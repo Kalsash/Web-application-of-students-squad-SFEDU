@@ -70,7 +70,7 @@ namespace Web_application_of_students_squad_SFEDU.Admin.Controllers
                         {
                             imageFactory.Load(titleImageFile.OpenReadStream())
                                         .Format(new WebPFormat())
-                                        .Quality(10)
+                                        .Quality(80)
                                         .Save(webPFileStream);
                         }
                     }

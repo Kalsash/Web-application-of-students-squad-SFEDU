@@ -19,7 +19,7 @@ namespace Web_application_of_students_squad_SFEDU
             string name = "Виктор";
             string patronymic = "Петрович";
             string directionOfSquad = "Строительное";
-            string nameOfSquad = "Студенческий информационный отряд <Вспышка>";
+            string nameOfSquad = "Студенческий информационный отряд 'Вспышка'";
             string department = "Мехмат"; // Факультет
             string birthDate = "01.01.1999"; // Дата рождения
             string course = "Бакалавриат, 3 курс";// Курс

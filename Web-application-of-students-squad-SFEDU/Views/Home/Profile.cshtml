@@ -9,7 +9,7 @@
         {
         if (user.Email == User.Identity.Name)
         {
-                    string s = "";           
+                    string s = user.BirthDate;           
             foreach (Match match in Regex.Matches(user.BirthDate, "([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})"))
                        {
                     s = match.Groups[3].Value + "." + match.Groups[2].Value + "." +match.Groups[1].Value;
@@ -23,7 +23,7 @@
         <div><b>Отчество: @user.Patronymic</b></div>
         <div><b>Дата рождения: @user.BirthDate</b></div>
         <div><b>Направление отряда: @user.DirectionOfSquad</b></div>
-        <div><b>Название отряда: @user.DirectionOfSquad</b></div>
+        <div><b>Название отряда: @user.NameOfSquad</b></div>
         <div><b>Факультет: @user.Department</b></div>
         <div><b>Курс: @user.Course</b></div>
         <div><b>Группа: @user.Group</b></div>
