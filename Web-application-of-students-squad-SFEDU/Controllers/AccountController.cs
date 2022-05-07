@@ -53,7 +53,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
 
                 var user2 = await _userManager.FindByNameAsync(model.Email);
                 if (user2 != null)
-                    return Content("Пользователь с данным Email уже зарегестрирован!");
+                    return Content("Пользователь с данным Email уже зарегистрирован!");
                 // добавляем пользователя
                 var result = await _userManager.CreateAsync(user, model.Password);
 

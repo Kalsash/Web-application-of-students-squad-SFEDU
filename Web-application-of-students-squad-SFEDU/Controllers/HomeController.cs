@@ -254,7 +254,7 @@ namespace Web_application_of_students_squad_SFEDU.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "Неправильный логин и (или) пароль");
+                        ModelState.AddModelError("", "Введен неправильный старый пароль или не удовлетворяет требованиям новый пароль!");
                     }
                 }
                 else
