@@ -10,6 +10,7 @@
     "outputFileName": "wwwroot/css/main.css",
     "inputFiles": [
       "wwwroot/css/bootstrap.css",
+      "wwwroot/css/magnific-popup.css",
       "wwwroot/css/responsive.css",
       "wwwroot/css/style.css"
     ]

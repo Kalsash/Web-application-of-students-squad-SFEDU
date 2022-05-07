@@ -5,7 +5,7 @@
 
 <div class="hero_area  fixed-top" style=" z-index: -1030 ">  </div>
 <!-- slider section -->
-<section class=" slider_section position-relative" style="margin-top : 15%">
+<section class=" slider_section position-relative" style="margin-top : 15%; word-break:break-word;">
      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -15,7 +15,7 @@
                             <div class="detail-box">
                                 <div>
                                     <h1>
-                                        ОДНО ДВИЖЕНИЕ - ОДНА ЛЮБОВЬ!
+                                        ОДНО ДВИЖЕНИЕ -<br /> ОДНА ЛЮБОВЬ!
                                     </h1>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                             <div class="detail-box">
                                 <div>
                                     <h1>
-                                        БОЛЬШЕ, ЧЕМ ПРОСТО РАБОТА!
+                                        БОЛЬШЕ, ЧЕМ <br /> ПРОСТО РАБОТА!
                                     </h1>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                             <div class="detail-box">
                                 <div>
                                     <h1>
-                                        ПОМОЖЕМ ПРОВЕСТИ ЛЕТО С ПОЛЬЗОЙ!
+                                        ПОМОЖЕМ ПРОВЕСТИ<br /> ЛЕТО С ПОЛЬЗОЙ!
                                     </h1>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@
                 <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
                     <img src="~/images/news/@entity.TitleImagePath" alt="" class="left img-fluid nwsborder"/>
                 </a>
-                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id" style="text-decoration: none; background-color: #0a053b77; border: solid 1px white; border-radius: 16px; padding: 0 8px; color: white; font-weight: 500; position: absolute; left: 35px; bottom: 15px; font-size: 25px;">
+                <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id" style="text-decoration: none; background-color: #0a053b77; border: solid 1px white; border-radius: 16px; padding: 0 8px; color: white; font-weight: 500; position: absolute; left: 35px; bottom: 15px; max-width: 70%">
                     @entity.Title
                 </a>
                 @if(k == 6)
